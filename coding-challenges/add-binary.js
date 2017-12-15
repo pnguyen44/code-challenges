@@ -1,3 +1,12 @@
+// write a function that takes two integer as an argument and return the sum of the integers as a binary number.
+
+function addBinary(a,b){
+  return (a+b).toString(2)
+}
+
+console.log(addBinary(10, 3))
+
+// alternative solution
 // function addBinary(a,b) {
 // let quotient
 // let dec = a + b
@@ -10,8 +19,3 @@
 //   }
 //   return remainderStr.split('').reverse().join('')
 // }
-function addBinary(a,b){
-  return (a+b).toString(2)
-}
-
-console.log(addBinary(10, 3))
