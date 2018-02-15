@@ -8,11 +8,11 @@
 // Valid passwords will only be alphanumeric characters.
 
 function validate(password) {
-    return password.search(/[A-Z]/g) !== -1 && password.search(/[a-z]/g) !== -1
-            && password.search(/[0-9]/g) !== -1
-            && password.search(/\W/g) < 0
-            && password.length >= 6
-
+  return password.search(/[A-Z]/g) !== -1 &&
+      password.search(/[a-z]/g) !== -1 &&
+      password.search(/[0-9]/g) !== -1 &&
+      password.search(/\W/g) < 0 &&
+      password.length >= 6
 }
 
 // Alternative Solution:
