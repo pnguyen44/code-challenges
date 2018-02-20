@@ -20,3 +20,18 @@
 function songDecoder(song){
   return song.split('WUB').filter(x => x !== '').join(' ')
 }
+
+// Alternative solutions:
+
+// function songDecoder(song){
+//   return song.replace(/(WUB)+/g," ").trim()
+// }
+//
+// function songDecoder(song){
+//   return song.split('WUB').filter(Boolean).join(' ');
+// }
+
+let answer = songDecoder("AaWUBWUBWUBBWUBWUBWUBC")
+// let answer = longest(['Hello','World','Codewars','Katas'],3)
+
+console.log(answer)
