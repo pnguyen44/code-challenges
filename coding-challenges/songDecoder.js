@@ -30,8 +30,3 @@ function songDecoder(song){
 // function songDecoder(song){
 //   return song.split('WUB').filter(Boolean).join(' ');
 // }
-
-let answer = songDecoder("AaWUBWUBWUBBWUBWUBWUBC")
-// let answer = longest(['Hello','World','Codewars','Katas'],3)
-
-console.log(answer)
