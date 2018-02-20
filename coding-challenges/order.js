@@ -15,6 +15,3 @@ function order(words){
     return a.match(/\d/g) - b.match(/\d/g)
   }).join(' ')
 }
-
-let answer = order("is2 Thi1s T4est 3a")
-console.log(answer)
