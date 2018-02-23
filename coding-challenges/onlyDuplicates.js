@@ -9,7 +9,6 @@
 
 function onlyDuplicates(str) {
   return str.split('').map(x => {
-    let count = str.split('').filter(l => l === x).length
-    return count > 1 ? x : ''
+    return str.split('').filter(l => l === x).length > 1 ? x : ''
   }).join('')
 }
