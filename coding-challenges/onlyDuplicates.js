@@ -12,3 +12,8 @@ function onlyDuplicates(str) {
     return str.split('').filter(l => l === x).length > 1 ? x : ''
   }).join('')
 }
+
+// Alternative Solution:
+// function onlyDuplicates(str) {
+//   return str.split('').filter(x => str.indexOf(x) !== str.lastIndexOf(x)).join('')
+// }
