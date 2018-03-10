@@ -7,9 +7,8 @@
 # Example: 348597 => [7,9,5,8,4,3]
 
 def digitize(n):
-    n = str(n)[::-1]
     answer = []
-    for x in n:
+    for x in str(n)[::-1]:
         answer.append(int(x))
     return answer
 
@@ -18,4 +17,4 @@ def digitize(n):
 #     return map(int, str(n)[::-1])
 #
 # def digitize(n):
-#     return [int(x) for x in str(n)[::-1]]    
+#     return [int(x) for x in str(n)[::-1]]
