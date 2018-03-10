@@ -12,3 +12,10 @@ def digitize(n):
     for x in n:
         answer.append(int(x))
     return answer
+
+# Alternative Solutions:
+# def digitize(n):
+#     return map(int, str(n)[::-1])
+#
+# def digitize(n):
+#     return [int(x) for x in str(n)[::-1]]    
