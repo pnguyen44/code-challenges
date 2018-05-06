@@ -7,12 +7,23 @@
 // fibonacci(4); // should return [0,1,1,2]
 // fibonacci(-1); // should return []
 
+// function fibonacci(n) {
+//   let res = [0,1]
+//   for(let i = 0; i < n - 2; i++) {
+//     res.push(res.slice(i).reduce((acc, curr) => acc + curr))
+//   }
+//   return n <=0 ? [] : res
+// }
+
+
+// Alternative Solution:
 function fibonacci(n) {
-  let res = [0,1]
-  for(let i = 0; i < n - 2; i++) {
-    res.push(res.slice(i).reduce((acc, curr) => acc + curr))
-  }
-  return n <=0 ? [] : res
+  if (n <= 0) return []
+  if (n === 1) return [0]
+  if (n === 2) return [0,1]
+  let res = fibonacci(n-1)
+  res.push(res[res.length - 1] + res[res.length - 2])
+  return res
 }
 
 let answer =  fibonacci(4)
