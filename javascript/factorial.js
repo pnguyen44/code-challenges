@@ -10,3 +10,15 @@
 // #Your task
 //
 // You have to create the function factorial that receives n and returns n!. You have to use recursion.
+
+
+const factorial = n => {
+  if (n ===0) {
+    return 1;
+  } else {
+    return n * factorial(n-1)
+  }
+};
+
+let answer =  factorial(2)
+console.log(answer)
