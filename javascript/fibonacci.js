@@ -10,10 +10,7 @@
 function fibonacci(n) {
   let res = [0,1]
   for(let i = 0; i < n - 2; i++) {
-    let sum = res.slice(i).reduce((acc, curr) => {
-      return acc + curr
-    })
-    res.push(sum)
+    res.push(res.slice(i).reduce((acc, curr) => acc + curr))
   }
   return n <=0 ? [] : res
 }
