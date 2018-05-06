@@ -16,5 +16,10 @@ function flattenAndSort(array) {
   return flatten.sort((a,b) => a - b);
 }
 
+// Alternative Solution:
+// function flattenAndSort(array) {
+//   return [].concat(...array).sort((a,b) => a - b);
+// }
+
 let answer =  flattenAndSort([[1, 3, 5], [100], [2, 4, 6]])
 console.log(answer)
