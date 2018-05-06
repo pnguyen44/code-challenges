@@ -8,3 +8,13 @@ function differenceInAges(ages){
   let diff = ages[ages.length - 1] - ages[0]
   return [ages[0], ages[ages.length - 1], diff];
 }
+
+// Alternative Solution:
+// function differenceInAges (ages) {
+//
+//     let max = Math.max(...ages),
+//         min = Math.min(...ages)
+//         diff = max - min
+//
+//     return [min, max, diff]
+// }
