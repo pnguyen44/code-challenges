@@ -10,3 +10,14 @@
 // Addendum:
 //
 // Please, keep in mind, that JavaScript is by default sorting objects alphabetically. For more information, please consult:
+
+function flattenAndSort(array) {
+  let flatten = array.reduce((a,b) => {
+    return a.concat(b)
+  })
+
+  return flatten.sort((a,b) => a - b);
+}
+
+let answer =  flattenAndSort([[1, 3, 5], [100], [2, 4, 6]])
+console.log(answer)
