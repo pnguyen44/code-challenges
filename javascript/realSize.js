@@ -21,7 +21,7 @@ function realSize(arrays) {
   return count
 }
 
-// Alternative Solution: 
+// Alternative Solution:
 // function realSize(arrays) {
 //   if (!arrays.length) return 0;
 //   var result = 0;
@@ -30,5 +30,11 @@ function realSize(arrays) {
 //   return result + realSize(arrays);
 // }
 
-let answer =  realSize([[5], 3], 0, 2, [], [4, [5, 6]]])
+// function realSize(arrays) {
+//   return arrays.reduce((a,e) => {
+//     return a += Array.isArray(e) ? realSize(e) : 1
+//   },0)
+// }
+
+let answer =  realSize([0, [1, [5, [4, 3], 1], 1]])
 console.log(answer)
