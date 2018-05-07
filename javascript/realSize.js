@@ -8,3 +8,18 @@
 // Addendum:
 //
 // Think of it as dimension-agnostic value counting. We want to know the total number of integers inside the array and we don't care for the dimensions.
+
+
+function realSize(arrays) {
+  if(!Array.isArray(arrays)) {
+    return 1
+  }
+  let count = 0
+  arrays.forEach(elm => {
+    count += realSize(elm)
+  })
+  return count
+}
+
+let answer =  realSize([[5], 3], 0, 2, [], [4, [5, 6]]])
+console.log(answer)
