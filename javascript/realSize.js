@@ -21,5 +21,14 @@ function realSize(arrays) {
   return count
 }
 
+// Alternative Solution: 
+// function realSize(arrays) {
+//   if (!arrays.length) return 0;
+//   var result = 0;
+//   var first = arrays.shift();
+//   result += Array.isArray(first) ? realSize(first) : 1;
+//   return result + realSize(arrays);
+// }
+
 let answer =  realSize([[5], 3], 0, 2, [], [4, [5, 6]]])
 console.log(answer)
