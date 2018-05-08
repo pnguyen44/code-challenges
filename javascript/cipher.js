@@ -9,12 +9,9 @@
 
 
 function encode(str) {
-  return str.split('').map( (c,i,a )=> String.fromCharCode(str.charCodeAt(i) * 6)).join('')
+   return [...str].map(e=>String.fromCharCode(e.charCodeAt()*6)).join``
 }
 
 function decode(str) {
-  return str.split('').map( (c,i,a )=> String.fromCharCode(str.charCodeAt(i) / 6)).join('')
+    return [...str].map(e=>String.fromCharCode(e.charCodeAt()/6)).join``
 }
-
-let answer =  decode("ưɞʈʈʚÀȊʚʬʈɘÆ")
-console.log(answer)
