@@ -10,5 +10,10 @@ function splitter(str){
   return str.replace(/\s/,'').replace(/[A-Z]+/g, ' $&').trim()
 }
 
+// Alternative Solution:
+// function splitter(str){
+//     return str.replace(/\s*([A-Z]+)/g, ' $1').trim();
+// }
+
 let answer =  splitter('0vM6dQ7sGj2v1gWfDIs1')
 console.log(answer)
