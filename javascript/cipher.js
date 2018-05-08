@@ -9,15 +9,11 @@
 
 
 function encode(str) {
-  return str.split('').map( (c,i,a )=> {
-    return String.fromCharCode(str.charCodeAt(i) * 6)
-  }).join('')
+  return str.split('').map( (c,i,a )=> String.fromCharCode(str.charCodeAt(i) * 6)).join('')
 }
 
 function decode(str) {
-  return str.split('').map( (c,i,a )=> {
-    return String.fromCharCode(str.charCodeAt(i) / 6)
-  }).join('')
+  return str.split('').map( (c,i,a )=> String.fromCharCode(str.charCodeAt(i) / 6)).join('')
 }
 
 let answer =  decode("ưɞʈʈʚÀȊʚʬʈɘÆ")
