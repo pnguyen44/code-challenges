@@ -4,3 +4,8 @@
 function binToDec(bin){
   return [...bin].reverse().map((e,i) => e * Math.pow(2,i)).reduce((a,c) => a+c)
 }
+
+// Alternative Solution:
+// function binToDec(bin){
+//   return parseInt(bin,2);
+// }
