@@ -17,5 +17,11 @@ function median(n){
   return n.length % 2 ? n[Math.floor(n.length / 2)] : (n[n.length / 2 - 1]  + n[n.length / 2]) / 2
 }
 
+// Alternative Solution:
+// function median(n){
+//   n.sort((a,b)=>a-b);
+//   return n.length%2? n[n.length/2-0.5]:n.length? (n[n.length/2]+n[n.length/2-1])/2:false
+// }
+
 let answer =  median([ 26, 38, 71, 52, 61, 46, 28, 64, 94, 83, 38, 5, 28, 38, 45 ])
 console.log(answer)
