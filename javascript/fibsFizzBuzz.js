@@ -29,3 +29,16 @@
 // Output:
 //
 // [1,1,2,"Fizz","Buzz",8,13,"Fizz",34,"Buzz",89,"Fizz",233,377,"Buzz","Fizz",1597,2584,4181,"FizzBuzz"]
+
+
+var fibsFizzBuzz = function(n) {
+  if (n === 1) return [1]
+  let res = [1,1]
+  for (let i = 0; i < n - 2; i++) {
+    res.push(res[i] + res[i + 1])
+  }
+  return res.map(n =>!(n % 15) ? 'FizzBuzz': !(n % 3) ? 'Fizz' : !(n % 5) ? 'Buzz': n)
+}
+
+let answer =  fibsFizzBuzz(5)
+console.log(answer)
