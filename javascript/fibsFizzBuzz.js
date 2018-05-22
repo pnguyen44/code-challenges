@@ -40,5 +40,16 @@ var fibsFizzBuzz = function(n) {
   return res.map(n =>!(n % 15) ? 'FizzBuzz': !(n % 3) ? 'Fizz' : !(n % 5) ? 'Buzz': n)
 }
 
+// Alternative Solution:
+// function fibsFizzBuzz(n) {
+//   let res = [], [a, b] = [0, 1];
+//   for (let i = 0; i < n; i++) {
+//     [a, b] = [b, a + b];
+//     res.push(a % 15 == 0 ? 'FizzBuzz' :
+//       a % 3 == 0 ? 'Fizz' : a % 5 == 0 ? 'Buzz' : a);
+//   }
+//   return res;
+// }
+
 let answer =  fibsFizzBuzz(5)
 console.log(answer)
