@@ -11,3 +11,8 @@
 // 20
 // 30
 // 40
+
+const closestMultiple10 = num => {
+  let str = Math.floor(num).toString()
+  return str[str.length -1] >= 5 ? (Math.floor(num/10) + 1) * 10 : Math.floor(num/10) * 10
+};
