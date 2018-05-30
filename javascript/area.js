@@ -3,9 +3,7 @@
 
 
 function area(d,l){
-  if(d <= l) return 'Not a rectangle'
-  let w = Math.sqrt(Math.pow(d,2) - Math.pow(l,2))
-  return Math.round(w  * l * 100)/100
+  return Math.round(l * Math.sqrt((d * d) - (l * l)) * 100) / 100 || 'Not a rectangle'
 }
 
 let answer = area(12,5)
