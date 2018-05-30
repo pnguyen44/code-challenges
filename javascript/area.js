@@ -6,5 +6,10 @@ function area(d,l){
   return Math.round(l * Math.sqrt((d * d) - (l * l)) * 100) / 100 || 'Not a rectangle'
 }
 
+// Alternative Solution:
+// function area(d, l) {
+//   return Math.round(l * Math.sqrt(d*d - l*l) * 1e2) / 1e2 || 'Not a rectangle';
+// }
+
 let answer = area(12,5)
 console.log(answer)
