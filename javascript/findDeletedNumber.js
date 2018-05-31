@@ -14,7 +14,7 @@
 function findDeletedNumber(arr, mixArr) {
   let sum1 = arr.reduce((acum, curr) => acum + curr,0)
   let sum2 = mixArr.reduce((acum, curr) => acum + curr,0)
-  return sum1 - sum2
+  return sum1 - sum2 || 0
 }
 
 let answer = findDeletedNumber([1,2,3,4,5], [3,4,1,5])
