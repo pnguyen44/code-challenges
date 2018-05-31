@@ -11,5 +11,7 @@ function countChar(string, char) {
   return string.split('').filter(l => l.toLowerCase() === char.toLowerCase()).length
 }
 
-let answer = countChar("FizzbuzZ", "z")
-console.log(answer)
+// Alternative Solution:
+// function countChar(string, char) {
+//   return (string.match(new RegExp(char, 'ig')) || []).length
+// }
