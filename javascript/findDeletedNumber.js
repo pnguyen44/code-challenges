@@ -10,3 +10,12 @@
 // If no number was deleted from the array and no difference with it, your function should return the int 0.
 //
 // Note that N may be 1 or less (in the latter case, the first array will be []).
+
+function findDeletedNumber(arr, mixArr) {
+  let sum1 = arr.reduce((acum, curr) => acum + curr,0)
+  let sum2 = mixArr.reduce((acum, curr) => acum + curr,0)
+  return sum1 - sum2
+}
+
+let answer = findDeletedNumber([1,2,3,4,5], [3,4,1,5])
+console.log(answer)
