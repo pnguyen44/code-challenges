@@ -6,3 +6,10 @@
 // countChar("fizzbuzz","z") => 4
 // countChar("Fancy fifth fly aloof","f") => 5
 // The character can be any alphanumeric character.
+
+function countChar(string, char) {
+  return string.split('').filter(l => l.toLowerCase() === char.toLowerCase()).length
+}
+
+let answer = countChar("FizzbuzZ", "z")
+console.log(answer)
