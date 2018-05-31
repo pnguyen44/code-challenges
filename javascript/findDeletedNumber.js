@@ -17,5 +17,10 @@ function findDeletedNumber(arr, mixArr) {
   return sum1 - sum2 || 0
 }
 
+// Alternative Solution:
+// function findDeletedNumber(arr, mixArr) {
+//   return arr.filter(v=>mixArr.indexOf(v)==-1)[0]||0
+// }
+
 let answer = findDeletedNumber([1,2,3,4,5], [3,4,1,5])
 console.log(answer)
