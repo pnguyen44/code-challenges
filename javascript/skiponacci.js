@@ -21,6 +21,3 @@ function skiponacci(n) {
 // }
 //
 // const getFib = (n) => { return n == 1 || n == 2 ? 1 : getFib(n - 2) + getFib(n - 1) }
-
-let answer = skiponacci(5)
-console.log(answer)
