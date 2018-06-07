@@ -12,5 +12,15 @@ function skiponacci(n) {
   return fib.map((c,i) => (i+1) % 2 === 0 ? 'skip' : c).join(' ')
 }
 
+// Alternative Solution:
+// function skiponacci(n) {
+//   let arr = [], i = 1;
+//   for (i; i <= n; i++)
+//     arr.push(getFib(i));
+//   return arr.map((e,i) => i % 2 == 0 ? `${e}` : 'skip').join(' ');
+// }
+//
+// const getFib = (n) => { return n == 1 || n == 2 ? 1 : getFib(n - 2) + getFib(n - 1) }
+
 let answer = skiponacci(5)
 console.log(answer)
