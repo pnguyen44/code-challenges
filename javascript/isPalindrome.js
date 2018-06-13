@@ -10,7 +10,7 @@
 
 
 function isPalindrome(line) {
-  return line.toString().split('').reverse().join('') === line.toString() ? true : false
+  return line.toString().split('').reverse().join('') === line.toString() 
 }
 
 let answer = isPalindrome('walter')
