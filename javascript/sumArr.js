@@ -14,5 +14,10 @@ function sumArr(a,b) {
   return res
 }
 
+// Alternative Solution:
+// function sumArr(a, b) {
+//   return a.map((x, i) => String(Number(x) + Number(b[i])))
+// }
+
 let answer = sumArr(['4','5','6','7','8'],['1','2','3','4','5'])
 console.log(answer)
