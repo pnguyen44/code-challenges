@@ -7,3 +7,11 @@
 // "walter" ==> false
 // 12321    ==> true
 // 123456   ==> false
+
+
+function isPalindrome(line) {
+  return line.toString().split('').reverse().join('') === line.toString() ? true : false
+}
+
+let answer = isPalindrome('walter')
+console.log(answer)
