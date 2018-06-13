@@ -4,7 +4,6 @@
 // Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of type ArgumentOutOfRangeException (C#) or IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError (JavaScript).
 
 function factorial(n){
-  if (n === 0) return 1
   if (n < 0 || n > 12) {
     throw new RangeError()
   }
