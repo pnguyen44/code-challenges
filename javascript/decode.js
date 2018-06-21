@@ -19,5 +19,9 @@ function decode(str) {
   }).join('')
 }
 
+// Alternative Solution:
+// const alph="abcdefghijklmnopqrstuvwxyz",
+// decode=s=>s.replace(/[a-z]/g,x=>alph[25-alph.indexOf(x)])
+
 let answer = decode("I dlfow orpv gl rmgviervd lm Mlmwzb nlimrmt!")
 console.log(answer)
