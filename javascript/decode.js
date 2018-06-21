@@ -8,3 +8,16 @@
 //
 // "I would like to interview on Monday morning!"
 // Your job is to write a method called decode that takes an encoded string as input and returns the decoded string as output.
+
+function decode(str) {
+  return str.split('').map((e,i )=> {
+    if (str.charCodeAt(i) > 96 && str.charCodeAt(i) < 123 ) {
+      return String.fromCharCode(122 - str.charCodeAt(i) + 97)
+    } else {
+      return e
+    }
+  }).join('')
+}
+
+let answer = decode("I dlfow orpv gl rmgviervd lm Mlmwzb nlimrmt!")
+console.log(answer)
