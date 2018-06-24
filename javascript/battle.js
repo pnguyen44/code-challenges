@@ -14,13 +14,7 @@
 
 
 function battle(x, y) {
-    let group1 = x.split('').reduce((accum, curr, index) => {
-      curr = x.charCodeAt(index)
-      return accum  +  x.charCodeAt(index) - 64
-    },0)
-    let group2 = y.split('').reduce((accum, curr, index) => {
-      return accum  +  y.charCodeAt(index) - 64
-    },0)
-    console.log(group1)
+    let group1 = x.split('').reduce((accum, curr) => accum  +  curr.charCodeAt(0) - 64,0)
+    let group2 = y.split('').reduce((accum, curr) => accum  +  curr.charCodeAt(0) - 64,0)
     return group1 === group2 ? 'Tie!' : group1 > group2 ? x : y
 }
