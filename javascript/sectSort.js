@@ -22,7 +22,3 @@ function sectSort(array, start, length) {
     array.slice(end)
   )
 }
-
-
-let answer = sectSort([9, 7, 4, 2, 5, 3, 1, 8, 6], 2, 5)
-console.log(answer)
