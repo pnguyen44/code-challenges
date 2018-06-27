@@ -14,13 +14,13 @@
 
 function sortAccending(a,b) { return a - b}
 
-function sectSort() {
-  let array = arguments[0]
-  let start = arguments[1]
-  let length = arguments[2]
-  let end = arguments[2] ? start + length : arguments[0].length +  arguments[1]
-  let sorted = array.slice(start,end).sort(sortAccending)
-  return array.slice(array,start).concat(sorted).concat(array.slice(end))
+function sectSort(array, start, length) {
+  let end = (length || array.length)  + start
+  return [].concat(
+    array.slice(array,start),
+    array.slice(start,end).sort(sortAccending),
+    array.slice(end)
+  )
 }
 
 
