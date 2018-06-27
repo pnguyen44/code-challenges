@@ -22,3 +22,9 @@ function sectSort(array, start, length) {
     array.slice(end)
   )
 }
+
+// Alternative Solution:
+// sectSort = (a, s, e) => {
+//   !s ? s = 0 : !e ? e = a.length : null;
+//   return [...a.slice(0,s), ...a.slice(s, s+e).sort((a,b)=> a-b), ...a.slice(s+e, a.length)];
+// }
