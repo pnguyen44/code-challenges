@@ -7,3 +7,18 @@
 // removeOrAdd("Hi! Hi") === "Hi Hi!"
 // removeOrAdd("Hi! Hi Hi!!") === "Hi Hi! Hi!!"
 // removeOrAdd("!Hi! !Hi !Hi!!") === "!Hi !Hi! !Hi!!"
+
+function removeOrAdd(s){
+  return s.split(' ').map(w => {
+    if (w[w.length - 1] !== '!') {
+      return w + '!'
+    } else if (w[w.length - 1]  === '!' && w[w.length - 2] !== '!') {
+      return w.slice(0,-1)
+    } else {
+      return w
+    }
+  }).join(' ')
+}
+
+let answer = removeOrAdd("!Hi! !Hi !Hi!!")
+console.log(answer)
