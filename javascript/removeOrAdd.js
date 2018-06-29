@@ -19,6 +19,3 @@ function removeOrAdd(s){
     }
   }).join(' ')
 }
-
-let answer = removeOrAdd("!Hi! !Hi !Hi!!")
-console.log(answer)
