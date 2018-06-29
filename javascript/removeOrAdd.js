@@ -19,3 +19,8 @@ function removeOrAdd(s){
     }
   }).join(' ')
 }
+
+// Alternative Solution:
+// function removeOrAdd(s) {
+//   return s.split(/\s+/).map(w => /!!$/.test(w) ? w : /\w$/.test(w) ? w + "!" : w.slice(0, -1)).join(" ")
+// }
