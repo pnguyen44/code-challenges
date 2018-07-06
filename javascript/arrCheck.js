@@ -11,7 +11,3 @@
 
 
 const arrCheck = value => value.every(Array.isArray)
-
-
-let answer = arrCheck(['A', 'R', 'R', 'A', 'Y'])
-console.log(answer)
