@@ -10,16 +10,21 @@
 // This is because H's index is 7, which is odd, so it is replaced by 1, and so on.
 
 
-function encode(plaintext){
-  return plaintext.split('').map(x => {
-    let codeValue =x.toUpperCase().charCodeAt(0)
-    if (codeValue > 64 && codeValue < 91) {
-      return (codeValue) % 2 ? '0' : '1'
-    } else {
-      return x
-    }
-  }).join('')
-}
+// function encode(plaintext){
+//   return plaintext.split('').map(x => {
+//     let codeValue =x.toUpperCase().charCodeAt(0)
+//     if (codeValue > 64 && codeValue < 91) {
+//       return (codeValue) % 2 ? '0' : '1'
+//     } else {
+//       return x
+//     }
+//   }).join('')
+// }
+//
+// Alternative Solution:
+// function encode(plaintext){
+//   return plaintext.replace(/[a-z]/gi, l => l.toUpperCase().charCodeAt(0) % 2 ? '0' : '1')
+// }
 
 let answer = encode("Hello World!")
 console.log(answer)
