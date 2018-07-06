@@ -11,13 +11,7 @@
 
 
 function encode(plaintext){
-  return plaintext.split('').map(x => {
-    if (/[a-z]/i.test(x)) {
-     return x.toUpperCase().charCodeAt(0) % 2 ? '0' : '1'
-    } else {
-      return x
-    }
-  }).join('')
+  return plaintext.split('').map(x => /[a-z]/i.test(x) ? (x.toUpperCase().charCodeAt(0) + 1) % 2 : x).join('')
 }
 
 
