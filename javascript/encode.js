@@ -19,7 +19,3 @@ function encode(plaintext){
 // function encode(plaintext){
 //   return plaintext.replace(/[a-z]/gi, l => l.toUpperCase().charCodeAt(0) % 2 ? '0' : '1')
 // }
-
-
-let answer = encode("Hello World!")
-console.log(answer)
