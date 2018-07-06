@@ -10,9 +10,7 @@
 // [{1:1},{2:2}] => false
 
 
-const arrCheck = value => {
-  return value.every(x => Array.isArray(x))
-}
+const arrCheck = value => value.every(Array.isArray)
 
 
 let answer = arrCheck(['A', 'R', 'R', 'A', 'Y'])
