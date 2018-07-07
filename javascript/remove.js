@@ -9,3 +9,12 @@
 // remove("Hi! !Hi Hi!") === ""
 // remove("Hi! Hi!! Hi!") === "Hi!!"
 // remove("Hi! !Hi! Hi!") === "!Hi!"
+
+function remove(s){
+  return s.split(' ').filter(x => {
+    return x.split('').filter(c => c === '!').length > 1 || x.split('').filter(c => c === '!').length === 0
+  }).join(' ')
+}
+
+let answer = remove("Hi Hi! Hi!")
+console.log(answer)
