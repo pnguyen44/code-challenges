@@ -19,9 +19,13 @@
 
 // Alternative Solution:
 
+// function remove(s){
+//   return s.split(' ').filter(w => w.split('!').length !== 2).join(' ')
+// }
+
 function remove(s){
-  return s.split(' ').filter(w => w.split('!').length !== 2).join(' ')
+  return s.split(' ').filter(w => !/^(!\w+|\w+!)$/.test(w) ).join(' ')
 }
 
-let answer = remove("Hi Hi! Hi!!")
+let answer = remove("!Hi Hi! Hi!!")
 console.log(answer)
