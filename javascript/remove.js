@@ -10,22 +10,19 @@
 // remove("Hi! Hi!! Hi!") === "Hi!!"
 // remove("Hi! !Hi! Hi!") === "!Hi!"
 
-// function remove(s){
-//   return s.split(' ').filter(x => {
-//     let count = x.split('').filter(c => c === '!').length
-//     return count > 1 || count === 0
-//   }).join(' ')
-// }
+function remove(s){
+  return s.split(' ').filter(x => {
+    let count = x.split('').filter(c => c === '!').length
+    return count > 1 || count === 0
+  }).join(' ')
+}
 
-// Alternative Solution:
+// Alternative Solutions:
 
 // function remove(s){
 //   return s.split(' ').filter(w => w.split('!').length !== 2).join(' ')
 // }
 
-function remove(s){
-  return s.split(' ').filter(w => !/^(!\w+|\w+!)$/.test(w) ).join(' ')
-}
-
-let answer = remove("!Hi Hi! Hi!!")
-console.log(answer)
+// function remove(s){
+//   return s.split(' ').filter(w => !/^(!\w+|\w+!)$/.test(w) ).join(' ')
+// }
