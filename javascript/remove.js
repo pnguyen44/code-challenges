@@ -10,12 +10,18 @@
 // remove("Hi! Hi!! Hi!") === "Hi!!"
 // remove("Hi! !Hi! Hi!") === "!Hi!"
 
+// function remove(s){
+//   return s.split(' ').filter(x => {
+//     let count = x.split('').filter(c => c === '!').length
+//     return count > 1 || count === 0
+//   }).join(' ')
+// }
+
+// Alternative Solution:
+
 function remove(s){
-  return s.split(' ').filter(x => {
-    let count = x.split('').filter(c => c === '!').length
-    return count > 1 || count === 0
-  }).join(' ')
+  return s.split(' ').filter(w => w.split('!').length !== 2).join(' ')
 }
 
-let answer = remove("Hi Hi! Hi!")
+let answer = remove("Hi Hi! Hi!!")
 console.log(answer)
