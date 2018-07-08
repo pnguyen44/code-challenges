@@ -17,3 +17,10 @@
 // ('tour')      =>  '.t.r'
 // ('Codewars')  =>  '.c.d.w.r.s'
 // ('aBAcAba')   =>  '.b.c.b'
+
+function stringTask(s){
+  return s.replace(/[aeiouy]/gi,'').replace(/[a-z]/gi, c => '.' + c.toLowerCase())
+}
+
+let answer = stringTask('Tour')
+console.log(answer)
