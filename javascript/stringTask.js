@@ -26,6 +26,3 @@ function stringTask(s){
 // function stringTask(s){
 //   return s.toLowerCase().replace(/[aeiouy]/g, '').replace(/./g, v=>'.'+v);
 // }
-
-let answer = stringTask('Tour')
-console.log(answer)
