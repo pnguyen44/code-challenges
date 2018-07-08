@@ -22,5 +22,10 @@ function stringTask(s){
   return s.replace(/[aeiouy]/gi,'').replace(/[a-z]/gi, c => '.' + c.toLowerCase())
 }
 
+// Alternative Solution:
+// function stringTask(s){
+//   return s.toLowerCase().replace(/[aeiouy]/g, '').replace(/./g, v=>'.'+v);
+// }
+
 let answer = stringTask('Tour')
 console.log(answer)
