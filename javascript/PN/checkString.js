@@ -6,6 +6,6 @@ function checkString(str, word) {
 
 // Alternative Solution:
 // function checkString(str, word) {
-//   let re  = new RegExp(word,'i')
+//   let re  = new RegExp(word)
 //   return re.test(str)
 // }
