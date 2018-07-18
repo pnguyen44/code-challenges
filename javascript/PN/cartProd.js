@@ -1,4 +1,4 @@
-// Write a function that returns the cartesian product of two sets as an array.
+// Write a function that returns an array of the cartesian product of two sets.
 
 function cartProd2Sets(setA, setB) {
   let result = []
