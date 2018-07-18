@@ -2,16 +2,15 @@
 
 function cartProd2Sets(setA, setB) {
   let result = []
-  let set = []
   setA.forEach(x => {
     for (let i = 0; i < setB.length; i++) {
-      set = [x, setB[i]]
-      result.push(set)
-      set = []
+      result.push([x, setB[i]])
     }
   })
   return result
 }
+
+
 
 // test
 const a = [1]
