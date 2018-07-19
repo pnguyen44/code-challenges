@@ -1,5 +1,4 @@
 // Write a function that returns an array of the cartesian product of two sets.
-
 function cartProd2Sets(setA, setB) {
   let result = []
   setA.forEach(x => {
@@ -23,6 +22,10 @@ function cartProd2Sets(setA, setB) {
 
 
 
+
+// Write a function that returns an array of the cartesian product of three sets.
+
+
 // test
 const a = [1]
 const b = [1, 2]
@@ -31,8 +34,9 @@ const x = ['a']
 const y = ['a', 'b']
 const z = ['a', 'b', 'c']
 
-console.log(cartProd2Sets(a,a))
-console.log(cartProd2Sets(a,x))
-console.log(cartProd2Sets(x,a))
-console.log(cartProd2Sets(c,x))
-console.log(cartProd2Sets(b,y))
+// console.log(cartProd2Sets(a,a))
+// console.log(cartProd2Sets(a,x))
+// console.log(cartProd2Sets(x,a))
+// console.log(cartProd2Sets(c,x))
+// console.log(cartProd2Sets(b,y))
+console.log(cartProd3Sets(b,b,b))
