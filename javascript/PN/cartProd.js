@@ -24,7 +24,22 @@ function cartProd2Sets(setA, setB) {
 
 
 // Write a function that returns an array of the cartesian product of three sets.
-
+function cartProd3Sets() {
+  let result = []
+  let set = []
+  for(let a = 0; a < arguments[0].length; a++) {
+    set.push(arguments[0][a])
+    for (let b = 0; b < arguments[1].length; b++) {
+      set.push(arguments[1][b])
+      for (let i = 0; i < arguments[2].length; i++) {
+        result.push(set.concat(arguments[2][i]))
+      }
+      set.pop()
+    }
+    set = []
+  }
+  return result
+}
 
 // test
 const a = [1]
