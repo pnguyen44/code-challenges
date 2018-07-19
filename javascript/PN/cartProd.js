@@ -10,6 +10,17 @@ function cartProd2Sets(setA, setB) {
   return result
 }
 
+// Alternative Solution:
+// function cartProd2Sets(setA, setB) {
+//   let result = []
+//   for(let a = 0; a < setA.length; a++) {
+//     for (let i = 0; i < setB.length; i++) {
+//         result.push([setA[a],setB[i]] )
+//     }
+//   }
+//   return result
+// }
+
 
 
 // test
