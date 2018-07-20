@@ -31,8 +31,8 @@ function cartProd3Sets(sets) {
     arr.push(sets[0][a])
     for (let b = 0; b < sets[1].length; b++) {
       arr.push(sets[1][b])
-      for (let i = 0; i < sets[2].length; i++) {
-        result.push(arr.concat(sets[2][i]))
+      for (let c = 0; c < sets[2].length; c++) {
+        result.push(arr.concat(sets[2][c]))
       }
       arr.pop()
     }
