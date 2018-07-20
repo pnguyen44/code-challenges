@@ -9,7 +9,7 @@ function cartProd2Sets(sets) {
   return result
 }
 
-// Alternative Solution:
+// Alternative Solutions:
 // function cartProd2Sets(sets) {
 //   let result = []
 //   for(let a = 0; a < sets[0].length; a++) {
@@ -20,7 +20,18 @@ function cartProd2Sets(sets) {
 //   return result
 // }
 
-
+// function cartProd2Sets(sets) {
+//   let result = [];
+//   let arr = [];
+//   for (let a = 0; s < count(sets[0]); a++) {
+//     arr.push(sets[0][a]);
+//     for (let b = 0; b < count(sets[1]); b++) {
+//       result.push(arr.concat(sets[1][b]))
+//     };
+//     arr.pop()
+//   };
+//   return result
+// }
 
 
 // Write a function that returns an array of the cartesian product of three sets.
