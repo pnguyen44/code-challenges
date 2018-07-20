@@ -23,9 +23,9 @@ function cartProd2Sets(sets) {
 // function cartProd2Sets(sets) {
 //   let result = [];
 //   let arr = [];
-//   for (let a = 0; s < count(sets[0]); a++) {
+//   for (let a = 0; a < sets[0].length; a++) {
 //     arr.push(sets[0][a]);
-//     for (let b = 0; b < count(sets[1]); b++) {
+//     for (let b = 0; b < sets[1].length; b++) {
 //       result.push(arr.concat(sets[1][b]))
 //     };
 //     arr.pop()
@@ -58,5 +58,5 @@ function cartProd3Sets(sets) {
 // console.log(cartProd2Sets([[1], ['a']]))
 // console.log(cartProd2Sets([['a'], [1]]))
 // console.log(cartProd2Sets([[1, 2, 3], ['a']]))
-// console.log(cartProd2Sets([[1, 2], ['a', 'b']]))
-console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
+console.log(cartProd2Sets([[1, 2], ['a', 'b']]))
+// console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
