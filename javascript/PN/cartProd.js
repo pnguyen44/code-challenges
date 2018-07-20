@@ -52,6 +52,11 @@ function cartProd3Sets(sets) {
   return result
 }
 
+
+// Write a function that returns an array of the cartesian product of any number of sets passed to it.
+
+
+
 // test
 
 // console.log(cartProd2Sets([[1], [1]]))
@@ -59,4 +64,4 @@ function cartProd3Sets(sets) {
 // console.log(cartProd2Sets([['a'], [1]]))
 // console.log(cartProd2Sets([[1, 2, 3], ['a']]))
 console.log(cartProd2Sets([[1, 2], ['a', 'b']]))
-// console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
+console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
