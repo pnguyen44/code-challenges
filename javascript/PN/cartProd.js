@@ -56,14 +56,21 @@ function cartProd3Sets(sets) {
 // Write a function that returns an array of the cartesian product of any number of sets passed to it.
 function cartProd(sets) {
   let results = [[]]
+  // loop through the sets array
   for (let s = 0; s < sets.length; s++) {
+    // set currSet to the current element of the sets array
     let currSet = sets[s]
     let temp = []
+    // loop through the results array
     for(let r = 0; r < results.length; r++) {
+      // loop through the currSet array
+      // concat the current element of the currSet array with the results array
+      //and push that value to the temp array
       for(let c = 0; c < currSet.length; c++) {
         temp.push(results[r].concat(currSet[c]))
       }
     }
+    // set results to the temp array
     results = temp
   }
   return results
