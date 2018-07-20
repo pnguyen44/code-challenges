@@ -1,20 +1,20 @@
 // Write a function that returns an array of the cartesian product of two sets.
-function cartProd2Sets(setA, setB) {
+function cartProd2Sets(sets) {
   let result = []
-  setA.forEach(x => {
-    for (let i = 0; i < setB.length; i++) {
-      result.push([x, setB[i]])
+  sets[0].forEach(x => {
+    for (let i = 0; i < sets[1].length; i++) {
+      result.push([x, sets[1][i]])
     }
   })
   return result
 }
 
 // Alternative Solution:
-// function cartProd2Sets(setA, setB) {
+// function cartProd2Sets(sets) {
 //   let result = []
-//   for(let a = 0; a < setA.length; a++) {
-//     for (let i = 0; i < setB.length; i++) {
-//         result.push([setA[a],setB[i]] )
+//   for(let a = 0; a < sets[0].length; a++) {
+//     for (let i = 0; i < sets[1].length; i++) {
+//         result.push([sets[0][a],sets[1][i]] )
 //     }
 //   }
 //   return result
@@ -24,34 +24,28 @@ function cartProd2Sets(setA, setB) {
 
 
 // Write a function that returns an array of the cartesian product of three sets.
-function cartProd3Sets() {
+function cartProd3Sets(sets) {
   let result = []
-  let set = []
-  for(let a = 0; a < arguments[0].length; a++) {
-    set.push(arguments[0][a])
-    for (let b = 0; b < arguments[1].length; b++) {
-      set.push(arguments[1][b])
-      for (let i = 0; i < arguments[2].length; i++) {
-        result.push(set.concat(arguments[2][i]))
+  let arr= []
+  for(let a = 0; a < sets[0].length; a++) {
+    arr.push(sets[0][a])
+    for (let b = 0; b < sets[1].length; b++) {
+      arr.push(sets[1][b])
+      for (let i = 0; i < sets[2].length; i++) {
+        result.push(arr.concat(sets[2][i]))
       }
-      set.pop()
+      arr.pop()
     }
-    set = []
+    arr = []
   }
   return result
 }
 
 // test
-const a = [1]
-const b = [1, 2]
-const c = [1, 2, 3]
-const x = ['a']
-const y = ['a', 'b']
-const z = ['a', 'b', 'c']
 
-// console.log(cartProd2Sets(a,a))
-// console.log(cartProd2Sets(a,x))
-// console.log(cartProd2Sets(x,a))
-// console.log(cartProd2Sets(c,x))
-// console.log(cartProd2Sets(b,y))
-console.log(cartProd3Sets(b,b,b))
+// console.log(cartProd2Sets([[1], [1]]))
+// console.log(cartProd2Sets([[1], ['a']]))
+// console.log(cartProd2Sets([['a'], [1]]))
+// console.log(cartProd2Sets([[1, 2, 3], ['a']]))
+// console.log(cartProd2Sets([[1, 2], ['a', 'b']]))
+console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
