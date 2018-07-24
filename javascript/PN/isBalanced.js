@@ -11,18 +11,28 @@
 function isBalanced(str) {
   let brackets = '[]{}()'
   str = str.split('')
-  let stack = []
+  let openBracketStack = []
   for(let i = 0; i < str.length; i++) {
     let char = str[i]
     let closeBracketIndex = brackets.indexOf(char)
     if(closeBracketIndex % 2 > 0) {
       let matchOpenBracket = brackets[closeBracketIndex - 1]
-      if (stack.length === 0 || stack.pop() !== matchOpenBracket) {
+      if (openBracketStack.length === 0 || openBracketStack.pop() !== matchOpenBracket) {
         return false
       }
     } else {
-      stack.push(char)
+      openBracketStack.push(char)
     }
   }
-  return stack.length === 0
+  return openBracketStack.length === 0
 }
+
+//test
+// console.log(isBalanced("([)]")) // false
+// console.log(isBalanced("()()")) // true
+// console.log(isBalanced("{}[]()")) // true
+// console.log(isBalanced("{[}]")) // false
+console.log(isBalanced("{[}]")) // false
+console.log(isBalanced("[{()()}({[]})]({}[({})])((((((()[])){}))[]{{{({({({{{{{{}}}}}})})})}}}))[][][]")) // true
+console.log(isBalanced("{}[]()")) // true
+console.log(isBalanced("(())((()())())")) // true
