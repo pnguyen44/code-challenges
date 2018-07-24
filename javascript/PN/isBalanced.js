@@ -12,11 +12,18 @@ function isBalanced(str) {
   let brackets = '[]{}()'
   str = str.split('')
   let openBracketStack = []
+  // loop through each character in string
   for(let i = 0; i < str.length; i++) {
     let char = str[i]
     let closeBracketIndex = brackets.indexOf(char)
+
+    // check for closed bracket characters.  If the character is an open bracket then add
+    // it to the openBracketStack array.
     if(closeBracketIndex % 2 > 0) {
       let matchOpenBracket = brackets[closeBracketIndex - 1]
+      
+      // if openBracketStack array is empty or if the last element of openBracketStack array onced removed does not equal the matchOpenBracket
+      // return false
       if (openBracketStack.length === 0 || openBracketStack.pop() !== matchOpenBracket) {
         return false
       }
