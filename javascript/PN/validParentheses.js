@@ -9,3 +9,18 @@
 // 0 <= input.length <= 100
 //
 // You may assume that the input string will only contain opening and closing parenthesis and will not be an empty string.
+
+function validParentheses(parens){
+  let stack = []
+  for (let i = 0; i < parens.length; i++) {
+    let char = parens[i]
+    if (char === ')') {
+      if (stack.length === 0 || stack.pop() !== '(') {
+        return false
+      }
+    } else {
+      stack.push(char)
+    }
+  }
+  return stack.length === 0
+}
