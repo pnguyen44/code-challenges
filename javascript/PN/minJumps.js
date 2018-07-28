@@ -4,21 +4,21 @@
 
 
 function minJumps(arr) {
-  let numJumps = []
+  let numOfJumps = []
   if (arr[0] === 0) return Infinity
 
-  numJumps[0] = 0
+  numOfJumps[0] = 0
 
   for (let i = 1; i < arr.length; i ++) {
-    numJumps[i] = Infinity
+    numOfJumps[i] = Infinity
     for (let j = 0; j < i; j++) {
-      if (arr[j] + j >=  i && numJumps[j] !== Infinity) {
-        numJumps[i] = Math.min(numJumps[i],numJumps[j] + 1)
+      if (arr[j] + j >=  i && numOfJumps[j] !== Infinity) {
+        numOfJumps[i] = Math.min(numOfJumps[i],numOfJumps[j] + 1)
         break
       }
     }
   }
-  return numJumps[numJumps.length - 1]
+  return numOfJumps[numOfJumps.length - 1]
 }
 
 //test
