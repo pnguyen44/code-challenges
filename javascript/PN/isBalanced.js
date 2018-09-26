@@ -36,7 +36,6 @@
 
 // Alternative Solution:
 function isBalanced(str) {
-  const openBracket = '[({'
   const bracketMapping = {
     "[" : ']',
     "{" : '}',
@@ -46,7 +45,7 @@ function isBalanced(str) {
 
   for(let i = 0; i < str.length; i++) {
     const currBracket = str[i]
-    if (openBracket.indexOf(currBracket) !== -1) {
+    if (bracketMapping.hasOwnProperty(currBracket)) {
       openBracketStack.push(currBracket)
     } else {
       // implies that it is a close bracket
