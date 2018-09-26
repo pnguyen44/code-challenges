@@ -24,6 +24,29 @@ function minJumps(arr) {
 // Given an array of integers where each element represents the max number of steps that can be made forward from that element.
 // Write a program that returns an array with the minimum number of jumps to reach the end of the array (starting from the first element).
 
+function minJumps(arr) {
+  let numOfJumps = []
+  let actualJumps = [0]
+
+  if (arr[0] === 0) return Infinity
+  numOfJumps[0] = 0
+
+  for (let i = 1; i < arr.length; i++) {
+    numOfJumps[i] = Infinity
+    for (let j = 0; j < i; j++) {
+      if (arr[j] + j >= i && arr[i] !== Infinity) {
+        // numOfJumps[i] = Math.min(numOfJumps[i],numOfJumps[j] + 1)
+        actualJumps[i] = j
+        break
+      }
+    }
+  }
+  // return numOfJumps[numOfJumps.length -1]
+  actualJumps = Array.from(new Set(actualJumps))
+  actualJumps = actualJumps.map(x => arr[x])
+  actualJumps.push(arr[arr.length - 1])
+  return actualJumps
+}
 
 
 
