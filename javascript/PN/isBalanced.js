@@ -8,31 +8,65 @@
 // The closing bracket of a pair must be of the same type as the opening bracket, e.g. '( )' is valid, but '[ )' is not valid.
 // Your task is to determine if of the strings of brackets in the input array are valid or invalid by these criteria.
 
-function isBalanced(str) {
-  let brackets = '[]{}()'
-  str = str.split('')
-  let openBracketStack = []
-  // loop through each character in string
-  for(let i = 0; i < str.length; i++) {
-    let char = str[i]
-    let closeBracketIndex = brackets.indexOf(char)
+// function isBalanced(str) {
+//   let brackets = '[]{}()'
+//   str = str.split('')
+//   let openBracketStack = []
+//   // loop through each character in string
+//   for(let i = 0; i < str.length; i++) {
+//     let char = str[i]
+//     let closeBracketIndex = brackets.indexOf(char)
+//
+//     // check for closed bracket characters.  If the character is an open bracket then add
+//     // it to the openBracketStack array.
+//     if(closeBracketIndex % 2 > 0) {
+//       let matchOpenBracket = brackets[closeBracketIndex - 1]
+//
+//       // if openBracketStack array is empty or if the last element of openBracketStack array onced removed does not equal the matchOpenBracket
+//       // return false
+//       if (openBracketStack.length === 0 || openBracketStack.pop() !== matchOpenBracket) {
+//         return false
+//       }
+//     } else {
+//       openBracketStack.push(char)
+//     }
+//   }
+//   return openBracketStack.length === 0
+// }
 
-    // check for closed bracket characters.  If the character is an open bracket then add
-    // it to the openBracketStack array.
-    if(closeBracketIndex % 2 > 0) {
-      let matchOpenBracket = brackets[closeBracketIndex - 1]
-      
-      // if openBracketStack array is empty or if the last element of openBracketStack array onced removed does not equal the matchOpenBracket
-      // return false
-      if (openBracketStack.length === 0 || openBracketStack.pop() !== matchOpenBracket) {
-        return false
-      }
+// Alternative Solution:
+function isBalanced(str) {
+  const openBracket = '[({'
+  const bracketMapping = {
+    "[" : ']',
+    "{" : '}',
+    "(" : ')'
+  }
+  const openBracketStack = []
+
+  for(let i = 0; i < str.length; i++) {
+    const currBracket = str[i]
+    if (openBracket.indexOf(currBracket) !== -1) {
+      openBracketStack.push(currBracket)
     } else {
-      openBracketStack.push(char)
+      // implies that it is a close bracket
+      if(openBracketStack.length === 0) {
+        return 'NO'
+      }
+      const lastSeenOpenBracket = openBracketStack.pop()
+      const lastSeenOpenBracketsMatchingClose = bracketMapping[lastSeenOpenBracket]
+      if(currBracket !== lastSeenOpenBracketsMatchingClose) {
+        return 'NO'
+      }
     }
   }
-  return openBracketStack.length === 0
+  if (openBracketStack.length === 0) {
+    return 'YES'
+  } else {
+    return 'NO'
+  }
 }
+
 
 //test
 // console.log(isBalanced("([)]")) // false
