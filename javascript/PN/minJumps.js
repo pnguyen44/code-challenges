@@ -49,8 +49,6 @@ function minJumps(arr) {
 // }
 
 
-
-
 //test
 console.log(minJumps([2,3,1,1,2,4,2,0,1,1])) // 4 (2-> 3 -> 2 -> 4 -> 1)
 // console.log(minJumps([2,8,3,6,9,3,0,0,1,3])) // 2 (2-> 8 -> 3)
