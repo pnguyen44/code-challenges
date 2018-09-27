@@ -79,12 +79,14 @@ function cartProd(sets) {
 
 // test
 
-// console.log(cartProd2Sets([[1], [1]]))
-// console.log(cartProd2Sets([[1], ['a']]))
-// console.log(cartProd2Sets([['a'], [1]]))
-// console.log(cartProd2Sets([[1, 2, 3], ['a']]))
-// console.log(cartProd2Sets([[1, 2], ['a', 'b']]))
-// console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
+// console.log(cartProd2Sets([[1], [1]])) //  [[1, 1]]
+// console.log(cartProd2Sets([[1], ['a']])) // [[1, 'a']]
+// console.log(cartProd2Sets([['a'], [1]])) // [['a', 1]]
+// console.log(cartProd2Sets([[1, 2, 3], ['a']])) // [[1, 'a'], [2, 'a'], [3, 'a']]
+// console.log(cartProd2Sets([[1, 2], ['a', 'b']])) // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
+//console.log(cartProd([[1], [1, 2], [1,2,3]])) // [[1, 1, 1], [1, 2, 1],
+                                              // [1, 1, 2], [1, 2, 2],
+                                              // [1, 1, 3], [1, 2, 3]]
 console.log(cartProd([[1, 2], [1, 2], [1,2]])) // [[1, 1, 1], [1, 1, 2], [1, 2, 1],
                                               // [1, 2, 2], [2, 1, 1], [2, 1, 2],
                                               // [2, 2, 1], [2, 2, 2]]
