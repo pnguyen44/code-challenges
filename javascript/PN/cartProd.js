@@ -85,4 +85,6 @@ function cartProd(sets) {
 // console.log(cartProd2Sets([[1, 2, 3], ['a']]))
 // console.log(cartProd2Sets([[1, 2], ['a', 'b']]))
 // console.log(cartProd3Sets([[1, 2], [1, 2], [1, 2]]))
-console.log(cartProd([[1, 2], [1, 2],[1,2]]))
+console.log(cartProd([[1, 2], [1, 2], [1,2]])) // [[1, 1, 1], [1, 1, 2], [1, 2, 1],
+                                              // [1, 2, 2], [2, 1, 1], [2, 1, 2],
+                                              // [2, 2, 1], [2, 2, 2]]
