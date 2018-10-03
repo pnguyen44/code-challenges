@@ -76,6 +76,27 @@ function cartProd(sets) {
   return results
 }
 
+// Alternative Solution:
+
+// function cartProd(sets) {
+//   let combos = [[]];
+//   for(let i = 0; i < sets.length; i++) {
+//     const currSet = sets[i];
+//     const newCombos = [];
+//     for (let j = 0; j < combos.length; j++) {
+//       const currCombo = combos[j];
+//       for (let k = 0; k < currSet.length; k++) {
+//         const currElem = currSet[k];
+//         let newCombo  = currCombo.concat(currElem);
+//         newCombos.push(newCombo);
+//       }
+//     }
+//     combos = newCombos;
+//   }
+//   return combos;
+// }
+
+
 
 // test
 
