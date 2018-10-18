@@ -15,7 +15,6 @@ function repeatedString(s, n) {
     const matchStr = s.match(/a/g)
     if (matchStr === null) return 0;
     const numWholeStr = Math.floor(n / s.length)
-    // let str = s.repeat(numWholeStr)
     let result = numWholeStr * matchStr.length
     let str = s.slice(0,n - (numWholeStr * s.length))
     str = str.match(/a/g)
@@ -24,9 +23,6 @@ function repeatedString(s, n) {
     } else {
         return result + str.length
     }
-    // console.log(str)
-    // return str.match(/a/g).length;
-
 }
 
 console.log(repeatedString('abc', 10)) // 7
