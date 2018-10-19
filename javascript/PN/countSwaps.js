@@ -18,3 +18,10 @@
 // Array is sorted in 3 swaps.
 // First Element: 1
 // Last Element: 6
+
+function countSwaps(a) {
+}
+
+console.log(countSwaps([4, 2, 3, 1])) // Array is sorted in 5 swaps.
+                                      // First Element: 1
+                                      // Last Element: 4
