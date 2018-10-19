@@ -31,9 +31,10 @@ function countSwaps(a) {
                 }
             }
         }
+    const lastElement = a[a.length - 1];
     console.log(`Array is sorted in ${numOfSwaps} swaps.`)
     console.log("First Element: " + a[0])
-    console.log("Last Element: "  + a[a.length - 1])
+    console.log("Last Element: "  + lastElement);
 }
 
 
