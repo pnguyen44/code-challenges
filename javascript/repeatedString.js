@@ -24,7 +24,14 @@ function repeatedString(s, n) {
     }
 }
 
-
+// Alternative Solution:
+// function repeatedString(s, n) {
+//   const match = s.match(/a/g);
+//   if (match == null) return 0;
+//   const repeat = Math.floor(n / s.length);
+//   const left = s.slice(0, n - (repeat * s.length));
+//   return (repeat * match.length) + left.split('').filter(x => x === 'a').length;
+// }
 
 console.log(repeatedString('abc', 10)) // 7
 console.log(repeatedString('a', 1000000000000)) // 1000000000000
