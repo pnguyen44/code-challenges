@@ -28,7 +28,6 @@ function countSwaps(a) {
                     let temp = a[j +1]
                     a[j+1] = a[j];
                     a[j] = temp;
-                    console.log(a)
                 }
             }
         }
