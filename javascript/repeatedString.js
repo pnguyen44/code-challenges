@@ -11,7 +11,6 @@
 // n: the number of characters to consider
 
 function repeatedString(s, n) {
-    if (s === 'a') return n;
     const matchStr = s.match(/a/g)
     if (matchStr === null) return 0;
     const numWholeStr = Math.floor(n / s.length)
@@ -24,6 +23,8 @@ function repeatedString(s, n) {
         return result + str.length
     }
 }
+
+
 
 console.log(repeatedString('abc', 10)) // 7
 console.log(repeatedString('a', 1000000000000)) // 1000000000000
