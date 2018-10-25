@@ -6,3 +6,9 @@
 //
 // An array of integers a.
 // An integer d, the number of rotations.
+
+
+
+
+
+// console.log(rotLeft(arr,4)) // 5 1 2 3 4
