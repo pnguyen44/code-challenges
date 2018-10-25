@@ -8,11 +8,23 @@
 // An integer d, the number of rotations.
 
 function rotLeft(a, d) {
-  d = d % a.length;
-  const end = a.slice(0, d)
-  const start = a.slice(d)
-  return start.concat(end)
+    // a.split('');
+    d = d % a.length;
+    for (var i = 1; i <=d; i++) {
+        const remove = a.shift();
+        a.push(remove);
+        // console.log(a)
+    }
+    return (a);
 }
+
+// Alternative Solution:
+// function rotLeft(a, d) {
+//   d = d % a.length;
+//   const end = a.slice(0, d)
+//   const start = a.slice(d)
+//   return start.concat(end)
+// }
 
 let arr = [1, 2, 3, 4, 5]
 
