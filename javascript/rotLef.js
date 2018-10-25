@@ -26,6 +26,4 @@ function rotLeft(a, d) {
 
 let arr = [1, 2, 3, 4, 5]
 
-
-
-// console.log(rotLeft(arr,4)) // 5 1 2 3 4
+console.log(rotLeft(arr,4)) // 5 1 2 3 4
