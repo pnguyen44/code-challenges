@@ -8,12 +8,10 @@
 // An integer d, the number of rotations.
 
 function rotLeft(a, d) {
-    // a.split('');
     d = d % a.length;
     for (var i = 1; i <=d; i++) {
         const remove = a.shift();
         a.push(remove);
-        // console.log(a)
     }
     return (a);
 }
