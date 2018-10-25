@@ -7,7 +7,14 @@
 // An array of integers a.
 // An integer d, the number of rotations.
 
+function rotLeft(a, d) {
+  d = d % a.length;
+  const end = a.slice(0, d)
+  const start = a.slice(d)
+  return start.concat(end)
+}
 
+let arr = [1, 2, 3, 4, 5]
 
 
 
