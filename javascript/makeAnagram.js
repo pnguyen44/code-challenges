@@ -29,15 +29,15 @@
 
 // Alternative Solution:
 function makeAnagram(a, b) {
-  var a = a.split("");
-  var b = b.split("");
-  var shortLong = a.length > b.length ? [b,a] : [a,b]
-  var short = shortLong[0];
-  var long = shortLong[1];
+  a = a.split("");
+  b = b.split("");
+  const  shortLong = a.length > b.length ? [b,a] : [a,b]
+  const short = shortLong[0];
+  const long = shortLong[1];
 
-  var matches = 0;
+  let matches = 0;
   short.forEach(function(cv, i){
-      var indexInLong = long.indexOf(cv);
+      const indexInLong = long.indexOf(cv);
       if (indexInLong !== -1) {
           matches ++
           long[indexInLong] = ""
