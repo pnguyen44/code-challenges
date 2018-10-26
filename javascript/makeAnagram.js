@@ -43,9 +43,7 @@ function makeAnagram(a, b) {
           long[indexInLong] = ""
       }
   })
-
-  console.log(a.length + b.length - matches * 2)
-
+  return a.length + b.length - matches * 2
 }
 
 
