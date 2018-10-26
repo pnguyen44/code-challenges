@@ -23,7 +23,6 @@ function makeAnagram(a, b) {
       secondWord.splice(pos,1)
     }
   }
-  console.log(secondWord)
   return count + secondWord.length;
 }
 
