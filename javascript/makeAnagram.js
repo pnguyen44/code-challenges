@@ -51,9 +51,6 @@ function makeAnagram(a, b) {
   for (let i = 0; i < b.length; ++i) {
     count[pos(b.charAt(i))]--;
   }
-
-  // console.log(count);
-
   const diff = count.reduce((p, c) => {
     return Math.abs(p) + Math.abs(c);
   }, 0);
@@ -62,5 +59,5 @@ function makeAnagram(a, b) {
 }
 
 
-console.log(makeAnagram("cde", "abc")); // 4
-// console.log(makeAnagram("showman", "woman")); // 2`
+// console.log(makeAnagram("cde", "abc")); // 4
+console.log(makeAnagram("showman", "woman")); // 2`
