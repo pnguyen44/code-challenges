@@ -18,7 +18,30 @@
 // arr: an array of integers .
 
 function diagonalDifference(arr) {
+    var x = []
+    var xSum = 0
+    var y = []
+    var ySum = 0
+    var counter = arr.length - 1
+    for (let i = 0; i < arr.length; i++) {
+        //console.log('..',a[i][i] )
+        //console.log('..',a[i][i] )
+        //console.log('..',a[i][i] )
+        x.push(arr[i][i])
+        y.push(arr[i][counter])
+        counter -= 1
+    }
 
+
+    xSum = x.reduce(function (prev, curr) {
+        return prev + curr
+    })
+    ySum = y.reduce(function (prev, curr) {
+        return prev + curr
+    })
+
+    console.log(Math.abs(xSum - ySum))
+    return Math.abs(xSum - ySum)
 }
 
 
