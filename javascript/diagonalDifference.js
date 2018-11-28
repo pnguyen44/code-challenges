@@ -22,11 +22,9 @@ function diagonalDifference(arr) {
     let xSum = 0
     const y = []
     let ySum = 0
-    // let counter = arr.length - 1
     for (let i = 0; i < arr.length; i++) {
         x.push(arr[i][i])
         y.push(arr[i][arr.length - 1 - i])
-        // counter -= 1
     }
 
     xSum = x.reduce(function (prev, curr) {
