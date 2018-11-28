@@ -18,11 +18,11 @@
 // arr: an array of integers .
 
 function diagonalDifference(arr) {
-    var x = []
-    var xSum = 0
-    var y = []
-    var ySum = 0
-    var counter = arr.length - 1
+    const x = []
+    let xSum = 0
+    const y = []
+    let ySum = 0
+    let counter = arr.length - 1
     for (let i = 0; i < arr.length; i++) {
         x.push(arr[i][i])
         y.push(arr[i][counter])
