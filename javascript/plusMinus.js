@@ -10,9 +10,6 @@
 // 0.200000
 
 function plusMinus(arr) {
-  // var n = parseInt(readLine());
-  // arr = readLine().split(' ');
-  // arr = arr.map(Number);
   let countPos = 0
   let count0 = 0
   let countNeg = 0
