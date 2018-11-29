@@ -10,7 +10,25 @@
 // 0.200000
 
 function plusMinus(arr) {
+  // var n = parseInt(readLine());
+  // arr = readLine().split(' ');
+  // arr = arr.map(Number);
+  let countPos = 0
+  let count0 = 0
+  let countNeg = 0
+  arr.forEach(function (e) {
+      if (e === 0) {
+          count0 += 1
+      } else if (e > 0) {
+          countPos += 1
+      } else {
+          countNeg += 1
+      }
+  })
 
+  console.log((countPos / arr.length).toFixed(6))
+  console.log((countNeg / arr.length).toFixed(6))
+  console.log((count0 / arr.length).toFixed(6))
 }
 
 
