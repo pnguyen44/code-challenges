@@ -29,7 +29,7 @@ function plusMinus(arr) {
 }
 
 
-// console.log(plusMinus([-4, 3, -9, 0, 4, 1]))
+console.log(plusMinus([-4, 3, -9, 0, 4, 1]))
 
 // 0.500000
 // 0.333333
