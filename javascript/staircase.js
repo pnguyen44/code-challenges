@@ -14,7 +14,6 @@
 
 function staircase(n) {
     var arr = []
-    var s = 0
     var space = 0
     var hash = 0
     for(let l=1; l<=n; l++){
