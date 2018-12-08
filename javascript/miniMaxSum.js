@@ -13,7 +13,6 @@ function miniMaxSum(arr) {
     let minSum = arr.slice(0,arr.length - 1).reduce((acc,curr) => {
       return acc + curr;
     });
-    // console.log(maxSum)
     console.log(minSum + ' ' + maxSum)
 }
 
