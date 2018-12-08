@@ -7,10 +7,10 @@
 
 function miniMaxSum(arr) {
     arr = arr.sort((a,b) => a - b);
-    let maxSum = arr.slice(1).reduce((acc,curr) => {
+    const maxSum = arr.slice(1).reduce((acc,curr) => {
       return acc + curr;
     });
-    let minSum = arr.slice(0,arr.length - 1).reduce((acc,curr) => {
+    const minSum = arr.slice(0,arr.length - 1).reduce((acc,curr) => {
       return acc + curr;
     });
     console.log(minSum + ' ' + maxSum)
