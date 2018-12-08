@@ -13,23 +13,21 @@
 
 
 function staircase(n) {
-    var arr = []
-    var space = 0
-    var hash = 0
-    for(let l=1; l<=n; l++){
-       space = n - l
-        hash = n - space
+    let arr = []
+    let s = 0
+    for (let l = 1; l <= n; l++) {
+        const space = n - l
+        const hash = n - space
 
-        for(s=1; s<=space; s++){
+        for (s = 1; s <= space; s++) {
             arr.push(' ')
         }
 
-        for(let h=1; h<=hash; h++){
-           arr.push("#")
+        for (let h = 1; h <= hash; h++) {
+            arr.push("#")
 
         }
-
-    console.log(arr.join(''))
+        console.log(arr.join(''))
         arr = []
     }
 }
