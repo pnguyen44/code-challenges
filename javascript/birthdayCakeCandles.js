@@ -13,3 +13,10 @@
 // birthdayCakeCandles has the following parameter(s):
 //
 // ar: an array of integers representing candle heights
+
+function birthdayCakeCandles(ar) {
+
+}
+
+
+console.log(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25])) // 4
