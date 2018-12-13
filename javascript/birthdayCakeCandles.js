@@ -15,7 +15,9 @@
 // ar: an array of integers representing candle heights
 
 function birthdayCakeCandles(ar) {
-
+    const max = Math.max.apply(null, ar)
+    console.log(max);
+    return ar.filter((x) => x === max).length
 }
 
 
