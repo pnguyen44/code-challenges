@@ -14,7 +14,6 @@ function minJumps(arr) {
     for (let j = 0; j < i; j++) {
       if (arr[j] + j >=  i && numOfJumps[j] !== Infinity) {
         numOfJumps[i] = Math.min(numOfJumps[i],numOfJumps[j] + 1)
-        break
       }
     }
   }
