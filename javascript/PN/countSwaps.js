@@ -22,11 +22,11 @@
 function countSwaps(a) {
     let numOfSwaps = 0;
         for(let i = 0; i < a.length; i++) {
-            for(let j = 0; j < a.length - 1; j++) {
-                if (a[j] > a[j + 1]) {
+            for(let j = 1; j < a.length; j++) {
+                if (a[j - 1] > a[j]) {
                     numOfSwaps +=1;
-                    let temp = a[j +1]
-                    a[j+1] = a[j];
+                    let temp = a[j -1]
+                    a[j-1] = a[j];
                     a[j] = temp;
                 }
             }
