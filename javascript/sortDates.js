@@ -6,7 +6,6 @@ function sorDates(dates) {
       let date2 = new Date(b)
       return date1 - date2
     });
-    console.log(dates)
     return dates
 }
 
