@@ -1,7 +1,13 @@
 // Given an array of dates, write a function that sort the dates.
 
 function sorDates(dates) {
-  
+    dates.sort(function(a, b) {
+      let date1 = new Date(a)
+      let date2 = new Date(b)
+      return date1 - date2
+    });
+    console.log(dates)
+    return dates
 }
 
 let dates =
