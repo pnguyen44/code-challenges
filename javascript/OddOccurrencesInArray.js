@@ -7,3 +7,11 @@
 // function solution(A);
 //
 // that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
+
+
+function solution(A) {
+
+}
+
+
+console.log(solution([9, 3, 9, 3, 9, 7, 9])) // 7
