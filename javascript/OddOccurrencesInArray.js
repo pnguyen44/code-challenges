@@ -10,7 +10,16 @@
 
 
 function solution(A) {
-
+  // write your code in JavaScript (Node.js 8.9.4)
+  let unique = Array.from(new Set(A))
+  let result
+  unique.forEach(num=> {
+      let numOfInstance = A.filter(x => x === num).length
+      if (numOfInstance ===1) {
+          result = num
+      }
+  })
+  return result
 }
 
 
