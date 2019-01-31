@@ -1,4 +1,4 @@
-// Given an array of dates, write a function that sort the dates from oldest to newest 
+// Given an array of dates, write a function that sort the dates from oldest to newest
 
 function sorDates(dates) {
     dates.sort(function(a, b) {
