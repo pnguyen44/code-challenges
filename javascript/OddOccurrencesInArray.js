@@ -22,5 +22,16 @@ function solution(A) {
   return result
 }
 
+// Alternative Solution:
+// function solution(A) {
+//     // write your code in JavaScript (Node.js 8.9.4)
+//     let unique = Array.from(new Set(A))
+//     return unique.filter(num => {
+//       let numOfInstance = A.filter(x => x === num).length
+//       if (numOfInstance ===1) return num
+//     })[0]
+// }
+
+
 
 console.log(solution([9, 3, 9, 3, 9, 7, 9])) // 7
