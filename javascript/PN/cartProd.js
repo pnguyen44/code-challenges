@@ -1,9 +1,10 @@
 // Write a function that returns an array of the cartesian product of two sets.
 function cartProd2Sets(sets) {
   let result = []
-  sets[0].forEach(x => {
+  sets[0].forEach(elm => {
     for (let i = 0; i < sets[1].length; i++) {
-      result.push([x, sets[1][i]])
+      const currCombo=[elm, sets[1][i]]
+      result.push(currCombo)
     }
   })
   return result
@@ -104,10 +105,10 @@ function cartProd(sets) {
 // console.log(cartProd2Sets([[1], ['a']])) // [[1, 'a']]
 // console.log(cartProd2Sets([['a'], [1]])) // [['a', 1]]
 // console.log(cartProd2Sets([[1, 2, 3], ['a']])) // [[1, 'a'], [2, 'a'], [3, 'a']]
-// console.log(cartProd2Sets([[1, 2], ['a', 'b']])) // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
+console.log(cartProd2Sets([[1, 2], ['a', 'b']])) // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
 //console.log(cartProd([[1], [1, 2], [1,2,3]])) // [[1, 1, 1], [1, 2, 1],
                                               // [1, 1, 2], [1, 2, 2],
                                               // [1, 1, 3], [1, 2, 3]]
-console.log(cartProd([[1, 2], [1, 2], [1,2]])) // [[1, 1, 1], [1, 1, 2], [1, 2, 1],
+// console.log(cartProd([[1, 2], [1, 2], [1,2]])) // [[1, 1, 1], [1, 1, 2], [1, 2, 1],
                                               // [1, 2, 2], [2, 1, 1], [2, 1, 2],
                                               // [2, 2, 1], [2, 2, 2]]
