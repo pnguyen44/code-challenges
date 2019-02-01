@@ -29,7 +29,10 @@
 
 
 function solution(A, K) {
-
+  const x = K % A.length;
+  if (!x) return A
+  const start = A.splice(A.length - x, x)
+  return start.concat(A)
 }
 
 let A = [3, 8, 9, 7, 6]
