@@ -16,7 +16,8 @@ function minJumps(arr) {
 
      // loop through the previous elements
     for (let j = 0; j < i; j++) {
-      if (arr[j] + j >=  i && numOfJumps[j] !== Infinity) {
+      // checks if it is possible to reach current element 
+      if (arr[j] + j >=  i) {
 
          // we choose the smaller number of either numOfJumps[i] (what the current min number of jumps to get to element [i]) or
          // numOfJumps[j]+1 (what the min number of jumps is to get to element [j] plus one more jump)
@@ -25,7 +26,7 @@ function minJumps(arr) {
     }
   }
   return numOfJumps[numOfJumps.length - 1]
-  // reach the number of jumps it took to get to the last element 
+  // reach the number of jumps it took to get to the last element
 }
 
 // Given an array of integers where each element represents the max number of steps that can be made forward from that element.
