@@ -25,7 +25,29 @@
 
 
 function longestMountain(A) {
+  console.log('A', A)
+  let start = 0
+  let X = A.length
+  let result = 0
 
+  while(start < X) {
+    let end = start
+    if (end <= X && A[end] < A[end + 1]) {
+      while ( end <= X && A[end] < A[end +1]) {
+        end +=1
+      }
+      if(end <= X  && A[end] > A[end +1]) {
+        while(end <= X  && A[end] > A[end +1]) {
+          end +=1
+        }
+        result = Math.max(result, end - start + 1)
+      }
+    }
+    // console.log('start' , start)
+    // console.log('end', end)
+    start = Math.max(end, start + 1)
+  }
+  return result
 }
 
 console.log(longestMountain([2,1,4,7,3,2,5]) ) // 5
