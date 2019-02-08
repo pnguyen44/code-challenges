@@ -25,7 +25,6 @@
 
 
 function longestMountain(A) {
-  console.log('A', A)
   let start = 0
   let X = A.length
   let result = 0
@@ -43,8 +42,7 @@ function longestMountain(A) {
         result = Math.max(result, end - start + 1)
       }
     }
-    // console.log('start' , start)
-    // console.log('end', end)
+
     start = Math.max(end, start + 1)
   }
   return result
