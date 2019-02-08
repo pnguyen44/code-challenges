@@ -13,9 +13,6 @@ function solution(N) {
   }
 
   str = Number(str).toString()
-  // console.log('bin', str)
-
-
   let result = 0
   let zeroCount = 0
 
