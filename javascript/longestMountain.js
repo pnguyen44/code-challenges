@@ -32,9 +32,11 @@ function longestMountain(A) {
   while(start < X) {
     let end = start
     if (end <= X && A[end] < A[end + 1]) {
+      // left side of mountain
       while ( end <= X && A[end] < A[end +1]) {
         end +=1
       }
+      // right side of mountain
       if(end <= X  && A[end] > A[end +1]) {
         while(end <= X  && A[end] > A[end +1]) {
           end +=1
