@@ -21,3 +21,12 @@
 // Note:
 //
 // 0 <= A.length <= 10000
+
+
+
+function longestMountain(A) {
+
+}
+
+console.log(longestMountain([2,1,4,7,3,2,5]) ) // 5
+console.log(longestMountain([2,2,2])) // 0
