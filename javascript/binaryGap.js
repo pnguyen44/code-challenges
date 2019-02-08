@@ -6,6 +6,29 @@
 
 
 function solution(N) {
+  let str = ''
+  while (N > 0) {
+      str += N % 2
+      N = Math.trunc(N/2)
+  }
+
+  str = Number(str).toString()
+  // console.log('bin', str)
+
+
+  let result = 0
+  let zeroCount = 0
+
+  for ( let digit of str ) {
+      if ( digit === '0' ) {
+          zeroCount += 1;
+      } else {
+          result = Math.max( result, zeroCount );
+          zeroCount = 0;
+      }
+  }
+
+  return result;
 }
 
 
