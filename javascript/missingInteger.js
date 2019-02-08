@@ -18,7 +18,16 @@
 
 
 function solution(A) {
-
+  // write your code in JavaScript (Node.js 8.9.4)
+  let result
+  A = Array.from(new Set(A)).sort((a,b) => a - b)
+  if (A[0] < 0) return 1
+  for (let i = 0; i< A.length - 1; i++) {
+    if (A[i] - A[i + 1] !== -1) {
+      return A[i] + 1
+    }
+  }
+    return A[A.length - 1] + 1
 }
 
 
