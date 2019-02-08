@@ -18,7 +18,6 @@
 
 
 function solution(A) {
-  // write your code in JavaScript (Node.js 8.9.4)
   let result
   A = Array.from(new Set(A)).sort((a,b) => a - b)
   if (A[0] < 0) return 1
