@@ -23,6 +23,10 @@
 // the elements of A are all distinct;
 // each element of array A is an integer within the range [1..(N + 1)].
 
+
+
+// time complexity: O(N) or O(N * log(N))
+
 function solution(A) {
   // write your code in JavaScript (Node.js 8.9.4)
   if (A.length === 0) return 1
@@ -44,6 +48,7 @@ function solution(A) {
       }
   }
 }
+
 
 
 console.log(solution([])) //1
