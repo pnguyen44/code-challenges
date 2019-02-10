@@ -18,19 +18,43 @@
 
 
 function solution(A) {
-  let result
-  A = Array.from(new Set(A)).sort((a,b) => a - b)
-  if (A[0] < 0) return 1
-  for (let i = 0; i< A.length - 1; i++) {
-    if (A[i] - A[i + 1] !== -1) {
-      return A[i] + 1
+    A = Array.from(new Set(A))
+    A = A.filter(x => x > 0)
+    A.sort((a,b) => a - b)
+    // console.log(A)
+    if (A.length === 0) return 1
+    let currMissing
+    // find missing number in sequence
+    for (let i = 0; i < A.length - 1; i++) {
+        if (A[i] - A[i + 1] !== -1){
+            currMissing = A[i] + 1
+            //  console.log('missing', currMissing)
+        }
     }
-  }
-    return A[A.length - 1] + 1
+    if (currMissing) {
+        if (A[0] > 1) {
+            return Math.min(currMissing,1)
+        } else {
+            // first element = 1
+            return currMissing
+        }
+    } else {
+        if (A[0] === 1) {
+            return A[A.length - 1] + 1
+        } else {
+            return 1
+        }
+    }
 }
 
 
 console.log(solution( [1, 3, 6, 4, 1, 2])) // 5
-console.log(solution(  [1, 2, 3])) // 4
-console.log(solution( [-1, -3])) // 1
-console.log(solution( [2])) // 1
+// console.log(solution(  [1, 2, 3])) // 4
+// console.log(solution( [-1, -3])) // 1
+// console.log(solution( [2])) // 1
+// console.log(solution( [-1])) // 1
+// console.log(solution( [0])) // 1
+// console.log(solution( [4, 5, 6, 2])) // 1
+// console.log(solution( [90, 91, 92, 93] )) // 1
+
+// console.log(solution(  [0, 1, 2, 3])) // 4
