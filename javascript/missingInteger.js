@@ -21,13 +21,13 @@ function solution(A) {
     A = Array.from(new Set(A))
     A = A.filter(x => x > 0)
     A.sort((a,b) => a - b)
-    // console.log(A)
     if (A.length === 0) return 1
     let currMissing
     // find missing number in sequence
     for (let i = 0; i < A.length - 1; i++) {
         if (A[i] - A[i + 1] !== -1){
             currMissing = A[i] + 1
+            break;
         }
     }
     if (currMissing) {
