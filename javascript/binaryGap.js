@@ -6,28 +6,29 @@
 
 
 function solution(N) {
-  let str = ''
-  while (N > 0) {
-      str += N % 2
-      N = Math.trunc(N/2)
-  }
+    let bin = ""
 
-  str = Number(str).toString()
-  let result = 0
-  let zeroCount = 0
-
-  for ( let digit of str ) {
-      if ( digit === '0' ) {
-          zeroCount += 1;
-      } else {
-          result = Math.max( result, zeroCount );
-          zeroCount = 0;
-      }
-  }
-
-  return result;
+    while(N > 0) {
+        bin += N % 2
+        N = Math.trunc(N/2)
+    }
+    bin = bin.split('').reverse().join('').toString()
+    let count = 0
+    let ans = 0
+    for (let digit of bin) {
+        if (digit === "0") {
+            count += 1
+        } else {
+            ans = Math.max(ans,count)
+            count = 0
+        }
+    }
+    // console.log(bin)
+    // console.log(ans)
+    return ans
 }
 
 
-console.log(solution(  32 )) // 0
-console.log(solution(  1041 )) // 5
+// console.log(solution(  32 )) // 0
+// console.log(solution(  1041 )) // 5
+console.log(solution(  561892 )) // 3
