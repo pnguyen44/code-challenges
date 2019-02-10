@@ -23,8 +23,6 @@ function solution(N) {
             count = 0
         }
     }
-    // console.log(bin)
-    // console.log(ans)
     return ans
 }
 
