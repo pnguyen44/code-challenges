@@ -22,3 +22,12 @@
 // N is an integer within the range [0..100,000];
 // the elements of A are all distinct;
 // each element of array A is an integer within the range [1..(N + 1)].
+
+function solution(A) {
+
+}
+
+
+console.log(solution([])) //1
+console.log(solution([2]])) //1
+console.log(solution([2,3,1,5])) //4
