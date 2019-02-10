@@ -8,29 +8,18 @@
 //
 // that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
 
+// time complexity: O(N) or O(N*log(N))
 
 function solution(A) {
-  // write your code in JavaScript (Node.js 8.9.4)
-  let unique = Array.from(new Set(A))
-  let result
-  unique.forEach(num=> {
-      let numOfInstance = A.filter(x => x === num).length
-      if (numOfInstance ===1) {
-          result = num
-      }
-  })
-  return result
-}
+  var x;
+  var arr = A.sort(function(a, b) {
+    return (a - b);
+  });
 
-// Alternative Solution:
-// function solution(A) {
-//     // write your code in JavaScript (Node.js 8.9.4)
-//     let unique = Array.from(new Set(A))
-//     return unique.filter(num => {
-//       let numOfInstance = A.filter(x => x === num).length
-//       if (numOfInstance ===1) return num
-//     })[0]
-// }
+  for (var i = 0; i < arr.length; i+=2) {
+    if ((arr[i] !== arr[i+1]) || i+1 == arr.length) return arr[i];
+  }
+}
 
 
 
