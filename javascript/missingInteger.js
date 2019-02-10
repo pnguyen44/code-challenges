@@ -28,14 +28,12 @@ function solution(A) {
     for (let i = 0; i < A.length - 1; i++) {
         if (A[i] - A[i + 1] !== -1){
             currMissing = A[i] + 1
-            //  console.log('missing', currMissing)
         }
     }
     if (currMissing) {
         if (A[0] > 1) {
             return Math.min(currMissing,1)
         } else {
-            // first element = 1
             return currMissing
         }
     } else {
