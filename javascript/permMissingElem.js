@@ -34,7 +34,6 @@ function solution(A) {
           break;
       }
   }
-  // console.log(missing)
   if (missing) {
       return missing
   } else {
