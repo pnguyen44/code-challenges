@@ -26,6 +26,8 @@
 // N is an integer within the range [1..1,000,000,000].
 
 
+// time complexity: O(sqrt(N))
+
 function solution(N) {
   let min = 0;
 
