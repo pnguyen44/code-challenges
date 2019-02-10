@@ -52,7 +52,24 @@
 
 
 function hourglassSum(arr) {
-
+  let hourglass
+  let topOfHourGlass
+  let results = []
+    for(let r = 0; r < arr[0].length - 2; r++ ) {
+      // console.log('.....')
+      for(let s = 0; s < arr[0].length - 2; s++ ) {
+        topOfHourGlass = arr[r].slice(s,s + 3)
+        let middleOfHourGlass = arr[r+1][s+1]
+        let bottomofHourGlass = arr[r+2].slice(s,s + 3)
+        hourglass = topOfHourGlass.concat(middleOfHourGlass,bottomofHourGlass)
+        // console.log('hourglass', hourglass)
+        let sum = hourglass.reduce((acc,curr) => acc+curr)
+        // result = sum
+        // console.log('sum', sum)
+        results.push(sum)
+      }
+    }
+    return Math.max.apply(null, results)
 
 }
 
