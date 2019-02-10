@@ -30,29 +30,27 @@ function solution(A) {
             break;
         }
     }
-    if (currMissing) {
-        if (A[0] > 1) {
-            return Math.min(currMissing,1)
-        } else {
-            return currMissing
-        }
+
+    if (A[0] === 1) {
+      return currMissing || A[A.length - 1] + 1
     } else {
-        if (A[0] === 1) {
-            return A[A.length - 1] + 1
-        } else {
-            return 1
-        }
+      // first element is greater than 1
+      if (currMissing) {
+        return Math.min(currMissing,1)
+      } else {
+        return 1
+      }
+
     }
+
 }
 
 
 console.log(solution( [1, 3, 6, 4, 1, 2])) // 5
-// console.log(solution(  [1, 2, 3])) // 4
-// console.log(solution( [-1, -3])) // 1
-// console.log(solution( [2])) // 1
-// console.log(solution( [-1])) // 1
-// console.log(solution( [0])) // 1
-// console.log(solution( [4, 5, 6, 2])) // 1
-// console.log(solution( [90, 91, 92, 93] )) // 1
-
-// console.log(solution(  [0, 1, 2, 3])) // 4
+console.log(solution(  [1, 2, 3])) // 4
+console.log(solution( [-1, -3])) // 1
+console.log(solution( [2])) // 1
+console.log(solution( [-1])) // 1
+console.log(solution( [0])) // 1
+console.log(solution( [4, 5, 6, 2])) // 1
+console.log(solution( [90, 91, 92, 93] )) // 1
