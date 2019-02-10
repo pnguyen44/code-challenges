@@ -27,7 +27,21 @@
 
 
 function solution(N) {
+  let min = 0;
 
+  for (let i = 0; i * i <= N; i++) {
+    if (N % i === 0) {
+      min = 2 * (i + (N / i));
+      console.log(i)
+      console.log(N/i)
+
+      if (i !== N / i) {
+        min=Math.min(min,2 * (i + (N / i)))
+      }
+    }
+  }
+
+  return min;
 }
 
 
