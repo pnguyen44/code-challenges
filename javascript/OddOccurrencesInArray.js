@@ -1,3 +1,6 @@
+// OddOccurrencesInArray
+
+
 // A non-empty array A consisting of N integers is given. The array contains an odd number of elements,
 // and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
 //
@@ -11,13 +14,9 @@
 // time complexity: O(N) or O(N*log(N))
 
 function solution(A) {
-  var x;
-  var arr = A.sort(function(a, b) {
-    return (a - b);
-  });
-
-  for (var i = 0; i < arr.length; i+=2) {
-    if ((arr[i] !== arr[i+1]) || i+1 == arr.length) return arr[i];
+  A.sort((a,b) => a - b)
+  for(let i = 0; i < A.length; i+=2 ) {
+    if (A[i] !== A[i + 1] || i +1 == A.length) return A[i]
   }
 }
 
