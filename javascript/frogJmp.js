@@ -24,3 +24,12 @@
 //
 // X, Y and D are integers within the range [1..1,000,000,000];
 // X ≤ Y.
+
+
+function solution(X, Y, D) {
+
+}
+
+
+console.log(solution(10,85,30)) //3
+console.log(solution(1, 5, 2)) //2
