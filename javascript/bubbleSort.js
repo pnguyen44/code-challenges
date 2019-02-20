@@ -1,5 +1,7 @@
 // sort array using bubble sort
 
+// time complexity	 = O(n^2)
+
 function bubbleSort(A) {
   for(let i = 0; i < A.length; i++) {
     for (let j = 1; j < A.length; j++) {
