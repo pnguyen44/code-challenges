@@ -5,8 +5,6 @@ function yoda(phrase, N) {
 
   const end = phrase.slice(0,N).join(' ')
   const start = phrase.slice(N).join(' ')
-  console.log(end)
-  console.log(start)
 
   return `${start} ${end}`
 
