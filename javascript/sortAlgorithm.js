@@ -37,3 +37,6 @@ function binarySearch(arr, x) {
 // let A = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3]
 // console.log(binarySearch(A, 7)) // true
 // console.log(binarySearch(A, 0)) // false
+
+
+// write a function that performs a quick sort
