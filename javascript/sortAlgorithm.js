@@ -42,7 +42,41 @@ function binarySearch(arr, x) {
 // write a function that performs a quick sort
 
 
+function quickSort(arr, left = 0, right = arr.length - 1) {
+  let len = arr.length,
+      index
 
+  if(len > 1) {
+    index = partition(arr, left, right)
+    if(left < index - 1) {
+      quickSort(arr, left, index - 1)
+    }
+    if(index < right) {
+      quickSort(arr, index, right)
+    }
+
+    return arr
+  }
+}
+
+function partition(arr,left, right) {
+  const middle = Math.floor((left + right) / 2)
+  const pivot = arr[middle]
+  while(left <= right) {
+    while (arr[left] < pivot) {
+      left++
+    }
+    while(arr[right] > pivot) {
+      right--
+    }
+    if (left <= right) {
+      [arr[left], arr[right]] = [arr[right], arr[left]]
+      left++
+      right--
+    }
+  }
+  return left
+}
 
 
 
