@@ -40,3 +40,11 @@ function binarySearch(arr, x) {
 
 
 // write a function that performs a quick sort
+
+
+
+
+
+
+// let A = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3]
+// console.log(quickSort(A)) // [ 1, 2, 2, 3, 3, 3, 5, 6, 7, 8 ]
