@@ -1,4 +1,4 @@
-// write a function that preform a binary search
+// write a recursive function that preform a binary search
 function binarySearchRecursive(arr, x, left = 0, right = arr.length - 1) {
   if (left > right) return false
   const mid = Math.floor((left + right) / 2)
