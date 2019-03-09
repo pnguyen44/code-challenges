@@ -1,6 +1,14 @@
 // write a function that preform a binary search
 function binarySearchRecursive(arr, x, left = 0, right = arr.length - 1) {
-
+  if (left > right) return false
+  const mid = Math.floor((left + right) / 2)
+  if (arr[mid] === x) {
+    return true
+  } else if (x < arr[mid]){
+      return binarySearchRecursive(arr, x,  0, mid - 1 )
+  } else {
+      return binarySearchRecursive(arr, x,  mid +1, right)
+  }
 }
 
 
