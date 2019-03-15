@@ -20,7 +20,6 @@ function decToBin(d) {
     bin += d % 2
     d = Math.trunc(d / 2)
   }
-  // console.log(bin)
   return bin.split('').reverse().join('')
 }
 
