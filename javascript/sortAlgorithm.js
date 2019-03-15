@@ -85,7 +85,7 @@ function partition(arr,left, right) {
 
 
 // create a function that performs a merge sort
-
+// merge sort O(n log(n) ) time, O(n) speace
 function mergeSort(A) {
   if (A.length === 1) return A
   const mid = Math.floor(A.length /2 )
