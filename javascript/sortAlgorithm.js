@@ -41,6 +41,8 @@ function binarySearch(arr, x) {
 
 // write a function that performs a quick sort
 
+// quick sort
+// time complexity O(n^2)
 
 function quickSort(arr, left = 0, right = arr.length - 1) {
   let len = arr.length,
@@ -77,8 +79,6 @@ function partition(arr,left, right) {
   }
   return left
 }
-
-
 
 // let A = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3]
 // console.log(quickSort(A)) // [ 1, 2, 2, 3, 3, 3, 5, 6, 7, 8 ]
