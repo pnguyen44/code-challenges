@@ -12,3 +12,6 @@ function decToBin(d) {
   } while (x !== 0)
   return res.reverse().map(x => x === 0 ? 0 : x % 2 === 0 ? 0 : 1).join('')
 }
+
+console.log(decToBin(10)) // 1010
+console.log(decToBin(14)) // 1110
