@@ -86,7 +86,31 @@ function partition(arr,left, right) {
 
 // create a function that performs a merge sort
 
+function mergeSort(A) {
+  if (A.length === 1) return A
+  const mid = Math.floor(A.length /2 )
+  const left = A.slice(0, mid)
+  const right = A.slice(mid)
+  return mergeHavles(
+    mergeSort(left),
+    mergeSort(right)
+  )
+}
 
-
+function mergeHavles(left, right) {
+  let result = []
+  let leftIndex = 0
+  let rightIndex = 0
+  while(leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex])
+      leftIndex++
+    } else {
+      result.push(right[rightIndex])
+      rightIndex++
+    }
+  }
+  return result.concat(left.slice(leftIndex), right.slice(rightIndex))
+}
 
 // console.log(mergeSort([2, 5, 1, 3, 7, 2, 3, 8, 6, 3])) // [ 1, 2, 2, 3, 3, 3, 5, 6, 7, 8 ]
