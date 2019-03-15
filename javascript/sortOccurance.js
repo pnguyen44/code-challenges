@@ -1,4 +1,4 @@
-// write a function takes a string, sorts the characters in string by the number of occurances in accending order
+// write a function takes a string, sorts the characters in string by the number of occurrences in accending order
 //, and returns that stirng.
 
 function sortOccurence(str) {
