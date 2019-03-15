@@ -10,7 +10,6 @@ function sortOccurence(str) {
     }
     return obj
   },{})
-  console.log('obj=', obj)
   let sortedKey = Object.keys(obj).sort((a,b) => {
     if (obj[a] === obj[b]) {
       if (a < b) {
@@ -22,13 +21,11 @@ function sortOccurence(str) {
       return obj[a] - obj[b]
     }
   })
-  console.log('sortedKey', sortedKey)
   let ans = ""
   for (let letter of sortedKey) {
     ans += letter.repeat(obj[letter])
   }
   return ans
-
 }
 
 
