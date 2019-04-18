@@ -2,7 +2,7 @@
 
 
 function areaOfCircle(radius) {
-
+  return Math.pow(radius,2) * Math.PI
 
 }
 
