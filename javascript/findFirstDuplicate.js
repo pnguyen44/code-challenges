@@ -6,8 +6,6 @@ function findFirstDuplicate(arr) {
     const currElem = arr[i]
     let firstFoundIndex = arr.indexOf(currElem)
     let lastFoundIndex = arr.lastIndexOf(currElem)
-    console.log('frist', firstFoundIndex)
-    console.log('last', lastFoundIndex)
     if (firstFoundIndex > -1 && lastFoundIndex > -1 && firstFoundIndex !== lastFoundIndex) {
       return arr[i]
       break;
