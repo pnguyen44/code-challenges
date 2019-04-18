@@ -11,11 +11,11 @@ const makeUniqueArray = arr => arr.reduce((unique,curr) => {
 
 
 function pangrams(str) {
-const upperCaseStrWithOutSpace = str.toUpperCase().replace(/ /g)
-const upperCaseStrArray = upperCaseStrWithOutSpace.split("");
-const upperCaseLetters = upperCaseStrArray.filter(checkCharCodeIsUpperCaseLetter);
-const deduppedUpperCaseLetters = makeUniqueArray(upperCaseLetters)
-return deduppedUpperCaseLetters.length === 26 ? 'pangram' : 'not pangram';
+  const upperCaseStrWithOutSpace = str.toUpperCase().replace(/ /g)
+  const upperCaseStrArray = upperCaseStrWithOutSpace.split("");
+  const upperCaseLetters = upperCaseStrArray.filter(checkCharCodeIsUpperCaseLetter);
+  const deduppedUpperCaseLetters = makeUniqueArray(upperCaseLetters)
+  return deduppedUpperCaseLetters.length === 26 ? 'pangram' : 'not pangram';
 }
 
 // alternative solution
