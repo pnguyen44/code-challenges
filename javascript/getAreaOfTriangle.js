@@ -1,7 +1,7 @@
 // Given a base and a height return the area of a triangle.
 
 function getAreaOfTriangle(base, height) {
-
+  return base * height / 2
 }
 
 // console.log(getAreaOfTriangle(3,4)) // 6
