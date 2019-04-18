@@ -1,7 +1,15 @@
 // Write a function that works like the javascript .join() method.
 
 function newJoinFunction(arr, separator=',') {
-
+  let str = ''
+  for (let i =0; i < arr.length; i++) {
+    if (i === arr.length - 1) {
+      str += arr[i]
+    } else {
+      str += arr[i] + separator
+    }
+  }
+  return str
 }
 
 
