@@ -18,3 +18,6 @@ function reverseArr(arr) {
 // console.log(reverseArr([3,3, 4, 4, 3,0])) // [0, 3, 4,4, 3,3]
 // console.log(reverseArr( [3, -3, -4, -7,34, 22, 0, -2])) // [-2, 0, 22, 4, -7, -4, -3, 3]
 // console.log(reverseArr([6, 5, -6])) // [-6, 5, 6]
+
+
+// Reverse an array in place without using the reverse functionality and without creating a new array.
