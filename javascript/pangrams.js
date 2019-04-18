@@ -1,10 +1,23 @@
 // given a sentence, find out if it contains all letters from a-z. Hint: they are specifically looking for set.
 
+const checkCharCodeIsUpperCaseLetter = (letter) => (letter.charCodeAt(0) - 64) >= 1 && (letter.charCodeAt(0) - 64) < 27
+
+const makeUniqueArray = arr => arr.reduce((unique,curr) => {
+   if(!unique.includes(curr)) {
+     unique.push(curr)
+   }
+   return unique
+ },[])
 
 
 function pangrams(str) {
-
+const upperCaseStrWithOutSpace = str.toUpperCase().replace(/ /g)
+const upperCaseStrArray = upperCaseStrWithOutSpace.split("");
+const upperCaseLetters = upperCaseStrArray.filter(checkCharCodeIsUpperCaseLetter);
+const deduppedUpperCaseLetters = makeUniqueArray(upperCaseLetters)
+return deduppedUpperCaseLetters.length === 26 ? 'pangram' : 'not pangram';
 }
+
 
 
 console.log(pangrams('qmExzBIJmdELxyOFWv LOCmefk TwPhargKSPEqSxzveiun')) // pangram
