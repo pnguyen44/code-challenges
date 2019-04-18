@@ -2,7 +2,19 @@
 
 
 function findFirstDuplicate(arr) {
-
+  for(let i = 0; i < arr.length; i++) {
+    const currElem = arr[i]
+    let firstFoundIndex = arr.indexOf(currElem)
+    let lastFoundIndex = arr.lastIndexOf(currElem)
+    console.log('frist', firstFoundIndex)
+    console.log('last', lastFoundIndex)
+    if (firstFoundIndex > -1 && lastFoundIndex > -1 && firstFoundIndex !== lastFoundIndex) {
+      return arr[i]
+      break;
+    }
+  }
+  // return empty array if nothing is duplicated
+  return []
 }
 
 
