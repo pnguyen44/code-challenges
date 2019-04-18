@@ -47,6 +47,13 @@ function reverseArrWithOutNewArray(arr) {
 //    return arr
 // }
 
+// function reverseArrWithOutNewArray(arr) {
+//   for (let i = 0; i < Math.floor((arr.length - 1 )/2); i++)  {
+//     [arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]]
+//   }
+//   return arr
+// }
+
 // console.log(reverseArrWithOutNewArray([3,4,10,1])) // [1,10,4,3]
 // console.log(reverseArrWithOutNewArray([16, 13, 7, 2, 1, 12])) // [12, 1, 2, 7, 13, 16]
 // console.log(reverseArrWithOutNewArray([3])) // [3]
