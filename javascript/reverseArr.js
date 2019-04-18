@@ -1,7 +1,13 @@
 // Reverse an array without using the built in reverse functionality.
 
 function reverseArr(arr) {
-
+  const result = []
+  const len = arr.length
+  for(let i = 0; i < len; i++) {
+    const ele = arr.pop()
+    result.push(ele)
+  }
+  return result
 }
 
 
