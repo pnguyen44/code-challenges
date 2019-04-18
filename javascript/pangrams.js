@@ -18,6 +18,32 @@ const deduppedUpperCaseLetters = makeUniqueArray(upperCaseLetters)
 return deduppedUpperCaseLetters.length === 26 ? 'pangram' : 'not pangram';
 }
 
+// alternative solution
+// function pangrams(s){
+//   // make string all uppercase
+//   s = s.toUpperCase()
+//   //remove space
+//   s = s.replace(/ /g,'')
+//   let arr = s.split('')
+//   // get only letters
+//   for (let i = 0; i < s.length; i++) {
+//     const charCode = s.charCodeAt(i)
+//     // let checkCharCodeIsUpperCaseLetter = charCode => (charCode - 64) >= 1 && (charCode - 64) < 27
+//     if (!checkCharCodeIsUpperCaseLetter) {
+//       arr.splice(i,1)
+//     }
+//   }
+//   // remove duplicates
+//   const uniqueArr = arr.reduce((unique,curr) => {
+//     if(!unique.includes(curr)) {
+//       unique.push(curr)
+//     }
+//     return unique
+//   },[])
+//
+//   return uniqueArr.length === 26 ? 'pangram' : 'not pangram'
+// }
+
 
 
 console.log(pangrams('qmExzBIJmdELxyOFWv LOCmefk TwPhargKSPEqSxzveiun')) // pangram
