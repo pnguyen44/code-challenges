@@ -22,6 +22,17 @@ function reverseArr(arr) {
 
 // Reverse an array in place without using the reverse functionality and without creating a new array.
 
+function reverseArrWithOutNewArray(arr) {
+  let left = 0
+  let right = arr.length -1
+  const end = Math.floor((arr.length - 1)/2)
+  while (left < end) {
+    [arr[left],arr[right]] = [arr[right],arr[left]]
+    left ++
+    right --
+  }
+  return arr
+}
 
 
 // console.log(reverseArrWithOutNewArray([3,4,10,1])) // [1,10,4,3]
