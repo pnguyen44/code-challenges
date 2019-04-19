@@ -1,6 +1,9 @@
 // Given n people, find total number of pairs can be formed.  1 Answer - They are looking for recursion.
 
-
+function findTotalNumOfPairs(n) {
+  if (n <= 1) return 0
+  return findTotalNumOfPairs(n - 1) + (n - 1)
+}
 
 
 // console.log(findTotalNumOfPairs(1)) //  0
