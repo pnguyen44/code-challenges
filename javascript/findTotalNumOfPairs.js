@@ -22,3 +22,9 @@ console.log(findTotalNumOfPairs(9853)) // 48535878
 
 
 // Given n, find the total number of pair combinations. Order does matter.
+
+
+
+console.log(countNumOfPair(5)) //  20
+console.log(countNumOfPair(10)) //  90
+console.log(countNumOfPair(1888)) //  3562656
