@@ -9,14 +9,25 @@
 // Your returned answers (both index1 and index2) are not zero-based.
 // You may assume that each input would have exactly one solution and you may not use the same element twice.
 
+// var twoSum = function(numbers, target) {
+//   for(let i = 0; i < numbers.length; i++) {
+//     for(let j = i + 1; j < numbers.length; j++) {
+//       if(numbers[i] + numbers[j] === target) {
+//         return [i + 1, j + 1]
+//       }
+//     }
+//   }
+// };
+
+// Best Solution
 var twoSum = function(numbers, target) {
-  for(let i = 0; i < numbers.length; i++) {
-    for(let j = i + 1; j < numbers.length; j++) {
-      if(numbers[i] + numbers[j] === target) {
-        return [i + 1, j + 1]
-      }
-    }
+  let left = 0
+  let right = numbers.length
+  while(left < right) {
+    if (numbers[left] + numbers[right] === target) return [left + 1, right + 1]
+    else if (numbers[left] + numbers[right] < target) left++
+    else right--
   }
-};
+}
 
 console.log(twoSum( [2,7,11,15] , 9 )) // [1,2]
