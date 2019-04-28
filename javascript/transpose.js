@@ -22,11 +22,11 @@
 
 var transpose = function(A) {
     let result = []
-    for (let i = 0; i < A[0].length; i++) {
-        let current = A[i]
+    for (let c = 0; c < A[0].length; c++) {
+        let current = A[c]
         let newCombo = []
-        for (let j = 0; j < A.length; j++ ) {
-          newCombo.push(A[j][i])
+        for (let r = 0; r < A.length; r++ ) {
+          newCombo.push(A[r][c])
         }
         result.push(newCombo)
     }
