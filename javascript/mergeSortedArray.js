@@ -20,11 +20,8 @@ var merge = function(nums1, m, nums2, n) {
       mergeSortedList.push(nums2[rightIndex])
       rightIndex++
     }
-    // console.log(rightIndex)
   }
   const restOfRightArray = nums2.splice(rightIndex)
-  // console.log('...', mergeSortedList.concat(rest))
-  // mergeSortedList = mergeSortedList.concat(rest)
   return mergeSortedList.concat(restOfRightArray)
 };
 
