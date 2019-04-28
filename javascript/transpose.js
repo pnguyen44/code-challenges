@@ -25,13 +25,9 @@ var transpose = function(A) {
     for (let i = 0; i < A[0].length; i++) {
         let current = A[i]
         let newCombo = []
-        console.log('i..', i)
         for (let j = 0; j < A.length; j++ ) {
-          console.log('j, i', j , i)
-          console.log('add', A[j][i])
           newCombo.push(A[j][i])
         }
-        console.log('newCombo', newCombo)
         result.push(newCombo)
     }
     return result
