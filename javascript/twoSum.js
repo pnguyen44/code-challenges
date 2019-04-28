@@ -10,7 +10,6 @@
 // You may assume that each input would have exactly one solution and you may not use the same element twice.
 
 var twoSum = function(numbers, target) {
-  // let result = []
   for(let i = 0; i < numbers.length; i++) {
     for(let j = i + 1; j < numbers.length; j++) {
       if(numbers[i] + numbers[j] === target) {
