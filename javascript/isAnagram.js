@@ -3,3 +3,8 @@
 
 // Note:
 // You may assume the string contains only lowercase alphabets.
+
+
+
+console.log(isAnagram('anagram', 'nagaram')) // true
+console.log(isAnagram('rat', 'car')) // false
