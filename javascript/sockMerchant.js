@@ -19,7 +19,6 @@ function sockMerchant(n, ar) {
         if (!color.includes(ar[i])) {
           const counts = ar.filter(x => x === ar[i]).length
           const pairsCount = Math.floor(counts/2)
-          console.log('pairs', pairsCount)
           if (pairsCount > 0 ) {
             numOfPairs+= pairsCount
             color.push(ar[i])
