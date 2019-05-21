@@ -11,3 +11,6 @@
 //
 // n: the number of socks in the pile
 // ar: the colors of each sock
+
+
+console.log(sockMerchant( 9, [10, 20, 20, 10, 10, 30, 50, 10, 20])) // 3
