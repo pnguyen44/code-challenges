@@ -41,4 +41,23 @@ class LinkedList {
     this.head = newHead
   }
 
+  deleteWithValue(data) {
+    if (this.head === null) return
+
+    // the data that you want to delete is the head
+    if (this.head.data === data) {
+      this.head = this.head.next
+      return
+    }
+
+    let current = this.head
+    while (current.next !== null) {
+      if (current.next.data === data) {
+        current.next = current.next.next
+        return;
+      }
+      current = current.next
+    }
+  }
+
 }
