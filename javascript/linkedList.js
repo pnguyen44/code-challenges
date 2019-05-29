@@ -69,5 +69,12 @@ class LinkedList {
     }
     console.log(str)
   }
-
 }
+
+let ll = new LinkedList()
+ll.insert(20);
+ll.insert(30);
+ll.insert(40);
+ll.insert(50);
+
+ll.printList()
