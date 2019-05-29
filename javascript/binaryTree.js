@@ -1,4 +1,4 @@
-// implement a binary tree
+// implement a binary search tree
 
 
 class Node {
@@ -53,3 +53,12 @@ class Node {
     }
   }
 }
+
+let ll = new Node()
+ll.insert(20);
+ll.insert(30);
+ll.insert(40);
+ll.insert(50);
+ll.contains(30)
+ll.contains(10)
+ll.printInOrder()
