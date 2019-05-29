@@ -1,4 +1,4 @@
-// implement a linked list
+// implement a linked list with a insert, append, prepend, and printList method
 
 
 class Node {
