@@ -43,4 +43,13 @@ class Node {
       }
   }
 
+  printInOrder() {
+    if (this.left != null) {
+      this.left.printInOrder()
+    }
+    console.log(this.data)
+    if (this.right != null) {
+      this.right.printInOrder()
+    }
+  }
 }
