@@ -14,7 +14,7 @@ class LinkedList {
     this.head = null,
     this.size = 0
   }
-  
+
   insert(data) {
     // create a new node
     let node = new Node(data)
@@ -30,6 +30,15 @@ class LinkedList {
       current.next = node
     }
     this.size++
+  }
+
+  prepend() {
+    // create new head
+    const newHead = new Node(datea)
+    // new heads next value to link to old head
+    newHead.next = this.head
+    // change the head pointer
+    this.head = newHead
   }
 
 }
