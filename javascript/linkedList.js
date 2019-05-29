@@ -60,4 +60,14 @@ class LinkedList {
     }
   }
 
+  printList() {
+    let current = this.head
+    let str = ''
+    while(current) {
+      str += current.data + ' '
+      current = current.next
+    }
+    console.log(str)
+  }
+
 }
