@@ -12,7 +12,7 @@ var merge = function(nums1, m, nums2, n) {
   let mergeSortedList = []
   let leftIndex = 0
   let rightIndex = 0
-  while(leftIndex < 3 && rightIndex < n) {
+  while(leftIndex < m && rightIndex < n) {
     if (nums1[leftIndex] < nums2[rightIndex]) {
       mergeSortedList.push(nums1[leftIndex])
       leftIndex++
@@ -26,3 +26,4 @@ var merge = function(nums1, m, nums2, n) {
 };
 
 console.log(merge( [1,2,3,0,0,0] , 3 , [2,5,6] , 3)) // [1,2,2,3,5,6]
+  
