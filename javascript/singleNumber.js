@@ -14,15 +14,16 @@
 // Output: 4
 
 
-function singleNumber() {
-  for (let i = 0; i < nums.length; i++) {
-      const first = nums.indexOf(nums[i])
-      const last = nums.lastIndexOf(nums[i])
-      if (first !== -1 && first === last) {
-          return nums[i]
-      }
-  }
-}
+// function singleNumber(nums) {
+//   for (let i = 0; i < nums.length; i++) {
+//       const first = nums.indexOf(nums[i])
+//       const last = nums.lastIndexOf(nums[i])
+//       if (first !== -1 && first === last) {
+//           return nums[i]
+//       }
+//   }
+// }
+
 
 
 console.log(singleNumber([2,2,1])) // 1
