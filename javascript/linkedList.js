@@ -61,15 +61,6 @@ class LinkedList {
   }
 
   reverseList(head = this.head) {
-    // let curr = this.head
-    // let result
-    // if (head.next === null) {
-    //   return null
-    // } else {
-    //   this.head = head.next
-    //   this.reverseList(head)
-    //   this.head = head
-    // }
     let prev = null
     let curr = this.head
     while(curr != null) {
@@ -77,11 +68,8 @@ class LinkedList {
       curr.next = prev
       prev = curr
       curr = next
-      // curr = curr.next
     }
     this.head = prev
-    // return prev
-
   }
 
   printList() {
