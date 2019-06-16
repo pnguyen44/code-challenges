@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class BTS {
+class BST {
   constructor() {
     this.root = null
   }
@@ -106,5 +106,21 @@ class BTS {
       }
     }
   }
-
 }
+
+var bts = new BST();
+
+bts.add(15);
+bts.add(25);
+bts.add(10);
+bts.add(7);
+bts.add(22);
+bts.add(17);
+bts.add(13);
+bts.add(5);
+bts.add(9);
+bts.add(27);
+// bts.inOrder(); // prints 5 7 9 10 13 15 17 22 25 27
+bts.remove(5);
+console.log(bts.inOrder()); // prints 7 9 10 13 15 17 22 25 27
+console.log(bts.contains(15))
