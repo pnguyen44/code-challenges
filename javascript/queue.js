@@ -12,5 +12,12 @@ class Queue {
   add(element) {
     this.items.push(element)
   }
-  
+
+  remove() {
+    if (this.isEmpty()) {
+      return 'Queue is empty'
+    } else {
+      return this.items.shift()
+    }
+  }
 }
