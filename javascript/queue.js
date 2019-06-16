@@ -20,4 +20,14 @@ class Queue {
       return this.items.shift()
     }
   }
+
+  // return the first element of a queue
+  front() {
+    if (isEmpty()) {
+      return 'No element in queue'
+    } else {
+      return this.items[0]
+    }
+  }
+
 }
