@@ -30,4 +30,7 @@ class Queue {
     }
   }
 
+  printQueue() {
+    console.log(this.items)
+  }
 }
