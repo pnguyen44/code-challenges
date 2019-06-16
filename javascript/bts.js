@@ -7,3 +7,9 @@ class Node {
     this.right = null
   }
 }
+
+class BTS {
+  constructor() {
+    this.root = null
+  }
+}
