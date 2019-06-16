@@ -101,33 +101,6 @@ class LinkedList {
    return -1
  }
 
-  // prepend() {
-  //   // create new head
-  //   const newHead = new Node(data)
-  //   // new heads next value to link to old head
-  //   newHead.next = this.head
-  //   // change the head pointer
-  //   this.head = newHead
-  // }
-
-  deleteWithValue(data) {
-    if (this.head === null) return
-
-    // the data that you want to delete is the head
-    if (this.head.data === data) {
-      this.head = this.head.next
-      return
-    }
-
-    let current = this.head
-    while (current.next !== null) {
-      if (current.next.data === data) {
-        current.next = current.next.next
-        return;
-      }
-      current = current.next
-    }
-  }
 
   reverseList(head = this.head) {
     let prev = null
@@ -139,6 +112,21 @@ class LinkedList {
       curr = next
     }
     this.head = prev
+  }
+
+  indexOf(data) {
+    let count = 0
+    let curr = this.head
+    while(curr != null) {
+      if(curr.data === data) {
+        return count
+      } else {
+        count++
+        current = current.next
+      }
+    }
+    // not found
+    return -1
   }
 
   printList() {
