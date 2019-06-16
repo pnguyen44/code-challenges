@@ -38,5 +38,38 @@ class BTS {
     }
   }
 
+  remove(data) {
+    this.root = this.removeNode(this.root, data)
+  }
+
+  removeNode(node,key) {
+    if (node === null) {
+      return null
+    } else if (key < node.data) {
+      node.left = this.removeNode(node.left, key)
+       return node
+    } else if (key > node.data) {
+      node.right = this.removeNode(node.right, key)
+       return node
+    } else {
+      if (node.left === null && node.right === null) {
+        node = null
+        return node
+      }
+      if (node.left === null) {
+        node = node.right
+        return node
+      } else if (node.right === null) {
+        node = node.left
+        return node
+      }
+
+      // delete node w/ 2 children
+      const temp = this.findMinNode(node.right)
+      node.data = temp.data
+      node.right = this.removeNode(node.right, aux.data)
+      return node
+    }
+  }
 
 }
