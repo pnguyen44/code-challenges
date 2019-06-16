@@ -59,7 +59,28 @@ class LinkedList {
    }
  }
 
-
+ removeFrom(index) {
+   if (index > 0 && index > this.size) {
+     return -1
+   } else {
+     let curr, prev, i = 0
+     curr = this.head
+     prev = curr
+     if (index == 0) {
+       this.head = curr.next
+     } else {
+       while(i < index) {
+         i++
+         prev = curr
+         curr = curr.next
+       }
+       // remove element
+       prev.next = curr.next
+     }
+     this.size--
+     return curr.data
+   }
+ }
 
   // prepend() {
   //   // create new head
