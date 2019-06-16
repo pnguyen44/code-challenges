@@ -23,7 +23,7 @@ class Queue {
 
   // return the first element of a queue
   front() {
-    if (isEmpty()) {
+    if (this.isEmpty()) {
       return 'No element in queue'
     } else {
       return this.items[0]
