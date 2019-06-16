@@ -34,3 +34,17 @@ class Queue {
     console.log(this.items)
   }
 }
+
+const queue = new Queue()
+
+queue.add(10);
+queue.add(20);
+queue.add(30);
+queue.add(40);
+queue.add(50);
+queue.add(60);
+
+console.log(queue.isEmpty())
+console.log(queue.front()) // returns 10
+console.log(queue.remove())
+console.log(queue.printQueue()) // [20, 30, 40, 50, 60] 
