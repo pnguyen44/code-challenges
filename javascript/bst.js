@@ -79,5 +79,15 @@ class BTS {
       return this.findMinNode(node.left)
     }
   }
+  inOrder(node = this.root, result=[]) {
+    if (node === null) {
+      return result
+    } else {
+      this.inOrder(node.left, result)
+      result.push(node.data)
+      this.inOrder(node.right, result)
+      return result
+    }
+  }
 
 }
