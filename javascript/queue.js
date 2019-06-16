@@ -36,19 +36,13 @@ class Queue {
 }
 
 class PriorityQueue extends Queue {
-  constructor() {
-    super()
-  }
   add(element) {
     if (this.isEmpty()) {
       this.items.push(element)
     } else {
       let added = false
       for(let i = 0; i < this.items.length; i++) {
-        // console.log(this.items[i])
-        if (element[1] < this.items[i,1]) {
-          // collection.splice(i,0,element);
-          console.log('got here')
+        if (element[1] < this.items[i][1]) {
           this.items.splice(i, 0, element)
           added = true
           break
@@ -83,6 +77,14 @@ pq.add(['Quincy Larson', 3]);
 pq.add(['Ewa Mitulska-Wójcik', 1])
 pq.add(['Briana Swift', 2])
 pq.printQueue();
-// pq.remove();
+      // [ [ 'Ewa Mitulska-Wójcik', 1 ],
+      // [ 'Beau Carnes', 2 ],
+      // [ 'Briana Swift', 2 ],
+      // [ 'Quincy Larson', 3 ] ]
+
+pq.remove();
 // console.log(pq.front());
-// pq.printQueue();
+pq.printQueue();
+  // [ [ 'Beau Carnes', 2 ],
+  // [ 'Briana Swift', 2 ],
+  // [ 'Quincy Larson', 3 ] ]
