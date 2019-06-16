@@ -46,4 +46,16 @@ class HashTable {
     }
   }
 
+  lookup(key) {
+    const index = hash(key, this.storageLimit)
+    if (this.storage[index] === undefined) {
+      return undefined
+    } else {
+      for(let i = 0; i < this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          return this.storage[index][i][1]
+        }
+      }
+    }
+  }
 }
