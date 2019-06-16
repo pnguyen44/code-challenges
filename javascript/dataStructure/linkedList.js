@@ -56,29 +56,28 @@ class LinkedList {
       }
       this.size++
     }
-   }
- }
+  }
 
- removeFrom(index) {
-   if (index > 0 && index > this.size) {
-     return -1
-   } else {
-     let curr, prev, i = 0
-     curr = this.head
-     prev = curr
-     if (index == 0) {
-       this.head = curr.next
+  removeFrom(index) {
+     if (index > 0 && index > this.size) {
+       return -1
      } else {
-       while(i < index) {
-         i++
-         prev = curr
-         curr = curr.next
+       let curr, prev, i = 0
+       curr = this.head
+       prev = curr
+       if (index == 0) {
+         this.head = curr.next
+       } else {
+         while(i < index) {
+           i++
+           prev = curr
+           curr = curr.next
+         }
+         // remove element
+         prev.next = curr.next
        }
-       // remove element
-       prev.next = curr.next
-     }
-     this.size--
-     return curr.data
+      this.size--
+      return curr.data
    }
  }
 
@@ -122,7 +121,7 @@ class LinkedList {
         return count
       } else {
         count++
-        current = current.next
+        curr = curr.next
       }
     }
     // not found
@@ -141,12 +140,16 @@ class LinkedList {
 }
 
 let ll = new LinkedList()
+ll.insert(10);
 ll.insert(20);
 ll.insert(30);
 ll.insert(40);
 ll.insert(50);
-ll.deleteWithValue(20)
-ll.printList()
+console.log('data removed', ll.removeData(50))
+ll.printList() // 10 20 30 40
 
-ll.reverseList()
-ll.printList()
+// console.log(ll.indexOf(40)) // 3
+ll.insertAt(60,2)
+ll.printList() // 10 20 60 30 40
+console.log(ll.removeFrom(3))
+ll.printList(); // 10 20 60 40
