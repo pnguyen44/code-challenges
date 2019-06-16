@@ -32,4 +32,18 @@ class HashTable {
       }
     }
   }
+
+  remove(key) {
+    const index = hash(key, this.storageLimit)
+    if(this.storage[index].length === 1 && this.storage[index][0][0] === key) {
+      delete storage[index]
+    } else {
+      for(let i = 0; i < this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          delete this.storage[index][i]
+        }
+      }
+    }
+  }
+
 }
