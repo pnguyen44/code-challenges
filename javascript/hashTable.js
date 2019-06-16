@@ -9,11 +9,27 @@ const hash = (str, max) => {
 
 class HashTable {
   constructor() {
-    this.storage = []
+    this.storage = {}
     this.storageLimit = 4
   }
   print() {
     console.log(this.storage)
   }
-  
+  add(key, value) {
+    const index = hash(key, this.storageLimit)
+    if (storage[index] === undefined) {
+      storage[index] = [key, value]
+    } else {
+      let added = false
+      for(let i = 0; i < this.storage[index].length; i++){
+        if (this.storage[index][i][0]) === key {
+          this.storage[index][i][1] = value
+          added = true
+        }
+      }
+      if(added === false) {
+        storage[index].push(key,value)
+      }
+    }
+  }
 }
