@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class BST {
+class BinarySearchTree {
   constructor() {
     this.root = null
   }
@@ -108,7 +108,7 @@ class BST {
   }
 }
 
-var bts = new BST();
+var bts = new BinarySearchTree();
 
 bts.add(15);
 bts.add(25);
