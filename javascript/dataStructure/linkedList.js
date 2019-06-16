@@ -82,6 +82,25 @@ class LinkedList {
    }
  }
 
+ removeData(data) {
+   let curr = this.head
+   let prev = null
+   while (curr != null) {
+     if(curr.data === data) {
+       if(prev == null) {
+         this.head = curr.next
+       } else {
+         prev.next = curr.next
+       }
+       this.size--
+       return curr.data
+     }
+     prev = curr
+     curr = curr.next
+   }
+   return -1
+ }
+
   // prepend() {
   //   // create new head
   //   const newHead = new Node(data)
