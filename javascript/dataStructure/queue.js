@@ -6,7 +6,7 @@ class Queue {
   }
 
   isEmpty() {
-    return this.items.lenght == 0
+    return this.items.length == 0
   }
 
   add(element) {
