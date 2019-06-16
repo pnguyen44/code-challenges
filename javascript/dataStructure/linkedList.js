@@ -32,14 +32,43 @@ class LinkedList {
     this.size++
   }
 
-  prepend() {
-    // create new head
-    const newHead = new Node(datea)
-    // new heads next value to link to old head
-    newHead.next = this.head
-    // change the head pointer
-    this.head = newHead
-  }
+  insertAt(data, index) {
+    if (index > 0 && index > this.size) {
+      return false
+    } else {
+      const newNode = new Node(data)
+      let curr, prev
+      curr = this.head
+      if (index == 0) {
+        newNode.next = this.head
+        this.head = newNode
+      } else {
+        curr = this.head
+        let i = 0
+        while (i < index) {
+          i++
+          prev = curr
+          curr = curr.next
+        }
+        // add element
+        newNode.next = curr
+        prev.next = newNode
+      }
+      this.size++
+    }
+   }
+ }
+
+
+
+  // prepend() {
+  //   // create new head
+  //   const newHead = new Node(data)
+  //   // new heads next value to link to old head
+  //   newHead.next = this.head
+  //   // change the head pointer
+  //   this.head = newHead
+  // }
 
   deleteWithValue(data) {
     if (this.head === null) return
@@ -88,5 +117,8 @@ ll.insert(20);
 ll.insert(30);
 ll.insert(40);
 ll.insert(50);
+ll.deleteWithValue(20)
+ll.printList()
 
+ll.reverseList()
 ll.printList()
