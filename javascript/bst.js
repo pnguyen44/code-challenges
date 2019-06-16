@@ -89,5 +89,22 @@ class BTS {
       return result
     }
   }
+  contains(value, node = this.root) {
+    if (value === node.data) {
+      return true
+    } else if (value <  node.data) {
+      if (node.left === null) {
+        return false
+      } else {
+        return this.contains(value, node.left)
+      }
+    } else {
+      if (node.right === null) {
+        return false
+      } else {
+        return this.contains(value, node.right)
+      }
+    }
+  }
 
 }
