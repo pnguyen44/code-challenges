@@ -21,9 +21,9 @@ var merge = function(nums1, m, nums2, n) {
       rightIndex++
     }
   }
+  const restOfLeftArray = nums2.splice(leftIndex)
   const restOfRightArray = nums2.splice(rightIndex)
   return mergeSortedList.concat(restOfRightArray)
 };
 
 console.log(merge( [1,2,3,0,0,0] , 3 , [2,5,6] , 3)) // [1,2,2,3,5,6]
-  
