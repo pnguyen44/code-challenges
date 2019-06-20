@@ -46,7 +46,6 @@
        curr.next = newNode
      }
    }
-   printList()
  }
 
  const l1 = new LinkedList()
@@ -57,7 +56,6 @@
  l2.add(1)
  l2.add(3)
  l2.add(4)
-
 
  var mergeTwoLists = function(l1, l2) {
    let mergedLinkedListHead = { val : -1, next : null }; // create dummy node to get started
