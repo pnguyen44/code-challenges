@@ -30,39 +30,63 @@
 //   return mergeSortedList.concat(restOfArray1, restOfArray2)
 // };
 
+// var merge = function(nums1, m, nums2, n) {
+//   const arr1 = nums1.slice(0,m)
+//   return [...arr1, nums2].sort().reduce((acc,val) => acc.concat(val),[])
+// }
+
+// alternative solution
 var merge = function(nums1, m, nums2, n) {
-  const arr1 = nums1.slice(0,m)
-  return [...arr1, nums2].sort().reduce((acc,val) => acc.concat(val),[])
-}
+      const tempNum1 = nums1.slice(0,m)
+      console.log(tempNum1)
+  let index1 = 0
+  let index2 = 0
+  let counter = 0
+
+  if (n === 0) {
+    return
+  }
+
+  while(counter < m + n) {
+
+    const val1 = tempNum1[index1]
+    const val2 = nums2[index2]
+    console.log('index 1 ' ,index1);
+    console.log('index 2  ' ,index2);
+    console.log('val 1 ' ,val1);
+    console.log('val 2  ' ,val2);
+
+    if(val1 === undefined ) {
+      nums1[counter] = val2
+      index2++
+    }else if (val2 === undefined ) {
+      nums1[counter] = val1
+      index1++
+    }else if(val1 < val2) {
+      nums1[counter] = val1
+      index1++
+    } else if (val1 === val2) {
+        nums1[counter] = val1
+        index1++
+        counter++
+        nums1[counter] = val2
+        index2++
+    } else {
+      nums1[counter] = val2
+      index2++
+    }
+    counter++
+  }
+};
 
 // var merge = function(nums1, m, nums2, n) {
-//   const tempNum1 = nums1.slice(0,m)
-//   let index1 = 0
-//   let index2 = 0
-//   let counter = 0
+//   let x = 0
+//   let y = 0
+//   nums1.splice(m, nums1.length);
+//   nums2.splice(m, nums1.length);
 //
-//   if (n === 0) return
-//
-//   while(counter < m + n) {
-//     const val1 = tempNum1[index1]
-//     const val2 = nums2[index2]
-//     if(val1 < val2) {
-//       nums1[counter] = val1
-//       index1++
-//     } else if (val1 === val2) {
-//         nums1[counter] = val1
-//         index1++
-//         counter++
-//         nums1[counter] = val2
-//         index2++
-//     } else {
-//       nums1[counter] = val2
-//       index2++
-//     }
-//     counter++
-//   }
-//   // console.log('nums1', nums1)
-// };
+// }
+
 
 console.log(merge( [1,2,3,0,0,0] , 3 , [2,5,6] , 3)) // [1,2,2,3,5,6]
 console.log(merge( [1] , 1 , [] , 0)) // [1,2,2,3,5,6]
