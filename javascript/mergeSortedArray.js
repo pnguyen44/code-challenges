@@ -37,8 +37,8 @@
 
 // alternative solution
 var merge = function(nums1, m, nums2, n) {
-      const tempNum1 = nums1.slice(0,m)
-      console.log(tempNum1)
+  const tempNum1 = nums1.slice(0,m)
+  // console.log(tempNum1)
   let index1 = 0
   let index2 = 0
   let counter = 0
@@ -51,10 +51,10 @@ var merge = function(nums1, m, nums2, n) {
 
     const val1 = tempNum1[index1]
     const val2 = nums2[index2]
-    console.log('index 1 ' ,index1);
-    console.log('index 2  ' ,index2);
-    console.log('val 1 ' ,val1);
-    console.log('val 2  ' ,val2);
+    // console.log('index 1 ' ,index1);
+    // console.log('index 2  ' ,index2);
+    // console.log('val 1 ' ,val1);
+    // console.log('val 2  ' ,val2);
 
     if(val1 === undefined ) {
       nums1[counter] = val2
