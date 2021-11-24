@@ -41,6 +41,8 @@
 // 0 <= digits[i] <= 9
 // digits does not contain any leading 0's.
 
+const {arrayEquals} = require("../utils");
+
 /**
  * @param {number[]} digits
  * @return {number[]}
@@ -88,8 +90,8 @@ const testCases = [
 for (const [i, test] of testCases.entries()) {
     const {input, expected} = test
     const result = plusOne(input)
-    const equalExpected = result.every((val, i)=> val === expected[i])
-    if (!equalExpected) {
+
+    if (!arrayEquals(result, expected)) {
         console.log(`case ${i} failed, expected: ${expected}, actual: ${result}`)
     }
 }

@@ -36,6 +36,8 @@
 // 1 <= m + n <= 200
 // -109 <= nums1[i], nums2[j] <= 109
 
+const {arrayEquals} = require("../utils");
+
 /**
  * @param {number[]} nums1
  * @param {number} m
@@ -105,9 +107,8 @@ const testCases = [
 for (const [i, test] of testCases.entries()) {
     const {nums1, m, nums2, n, expected} = test
     merge(nums1, m, nums2, n)
-    const equalExpected = nums1.every((val, i)=> val === expected[i])
 
-    if (!equalExpected) {
+    if (!arrayEquals(nums1, expected)) {
         console.log(`case ${i} failed, expected: ${expected}, actual: ${nums1}`)
     }
 }

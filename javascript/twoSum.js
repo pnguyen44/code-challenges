@@ -29,6 +29,8 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
+const {arrayEquals} = require("../utils");
+
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -67,8 +69,8 @@ const testCases = [
 for (const [i, test] of testCases.entries()) {
     const {nums, target, expected} = test
     const result = twoSum(nums, target)
-    const equalExpected = result.every((val, i)=> val === expected[i])
-    if (!equalExpected) {
+
+    if (!arrayEquals(result, expected)) {
         console.log(`case ${i} failed, expected: ${expected}, actual: ${result}`)
     }
 }
