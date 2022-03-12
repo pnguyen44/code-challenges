@@ -26,11 +26,28 @@
 // };
 
 // Faster solution
-const isAnagram = function (s, t) {
-  const hash = {};
-  s.split("").forEach((c) => (hash[c] = hash[c] ? hash[c] + 1 : 1));
-  t.split("").forEach((c) => (hash[c] = hash[c] ? hash[c] - 1 : 1));
-  return Object.values(hash).every((v) => v === 0);
+// const isAnagram = function (s, t) {
+//   const hash = {};
+//   s.split("").forEach((c) => (hash[c] = hash[c] ? hash[c] + 1 : 1));
+//   t.split("").forEach((c) => (hash[c] = hash[c] ? hash[c] - 1 : 1));
+//   return Object.values(hash).every((v) => v === 0);
+// };
+
+// Alternative solution
+var isAnagram = function(s, t) {
+  if (s.length !== t.length) return false
+
+  const count = {}
+
+  for (let item of s ) {
+      count[item] = (count[item] || 0) + 1
+  }
+
+  for (let item of t) {
+      if (!count[item]) return false
+      count[item]--
+  }
+  return Object.values(count).every(v => v === 0)
 };
 
 const testCases = [
@@ -45,6 +62,7 @@ const testCases = [
     expected: false,
   },
 ];
+
 
 for (const [i, test] of testCases.entries()) {
   const { t, s, expected } = test;
