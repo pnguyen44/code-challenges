@@ -46,10 +46,29 @@
 // };
 
 // Faster solution:
+// var strStr = function(haystack, needle) {
+//     if (needle.length === 0) return 0;
+//     const splitAtNeedle = haystack.split(needle)
+//     return splitAtNeedle.length > 1 ? splitAtNeedle[0].length : -1
+// };
+
+// Solution using no built-in methods
 var strStr = function(haystack, needle) {
-    if (needle.length === 0) return 0;
-    const splitAtNeedle = haystack.split(needle)
-    return splitAtNeedle.length > 1 ? splitAtNeedle[0].length : -1
+    if (needle.length === 0 || haystack === needle) return 0
+    if (haystack.length < needle.length + 1) return - 1
+
+    for (let i = 0; i < haystack.length - needle.length + 1; i++) {
+        let j = 0
+        let k = i
+        while (haystack[k] === needle[j] && j < needle.length) {
+            j++
+            k++
+        }
+
+        if (j === needle.length) return i
+    }
+
+    return -1
 };
 
 const testCases = [
