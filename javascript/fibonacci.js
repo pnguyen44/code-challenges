@@ -16,7 +16,7 @@
 // }
 
 
-// Alternative Solution:
+// Recursive Solution:
 function fibonacci(n) {
   if (n <= 0) return []
   if (n === 1) return [0]
@@ -24,4 +24,24 @@ function fibonacci(n) {
   let res = fibonacci(n -1)
   res.push(res[res.length - 1] + res[res.length - 2])
   return res
+}
+
+const { arrayEquals } = require("../utils");
+const testCases = [
+  {
+    n: 4,
+    expected: [0,1,1,2]
+  },
+  {
+    n: -1,
+    expected: []
+  }
+]
+
+for (const [i, test] of testCases.entries()) {
+  const {n, expected} = test
+  const result = fibonacci(n)
+  if (!arrayEquals(result, expected)) {
+    console.log(`case ${i} failed, expected: ${expected}, actual: ${result}`);
+  }
 }
