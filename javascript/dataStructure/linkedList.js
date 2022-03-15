@@ -1,4 +1,4 @@
-// implement a linked list with a insert, insertAt, removeFrom, removeData, reverseList, indexOf, toArray, and printList method
+// implement a linked list with a insert, insertAt, removeFrom, removeData, reverseList, indexOf, toArray, printList, and mergeTwoLists method
 
 class Node {
   constructor(data) {
@@ -144,6 +144,29 @@ class LinkedList {
   }
 }
 
+function mergeTwoLists (list1, list2) {
+  const mergedListHead = new Node(null);
+  let curr = mergedListHead;
+
+  while (list1 && list2) {
+    if (list1.val < list2.val) {
+      curr.next = list1;
+      list1 = list1.next;
+    } else {
+      curr.next = list2;
+      list2 = list2.next;
+    }
+
+    curr = curr.next;
+  }
+
+  curr.next = list1 || list2;
+
+  const ll = new LinkedList();
+  ll.head = mergedListHead.next;
+  return ll;
+};
+
 const ll = new LinkedList();
 ll.insert(10);
 ll.insert(20);
@@ -151,6 +174,11 @@ ll.insert(30);
 ll.insert(40);
 ll.insert(50);
 ll.printList(); // 10 20 30 40 50
+const ll2 = new LinkedList();
+ll2.insert(2);
+const mergedList = mergeTwoLists(ll.head, ll2.head); // 2, 10, 20, 30, 40, 50
+mergedList.printList();
+
 console.log("data removed", ll.removeData(50)); // data removed 50
 ll.printList(); // 10 20 30 40
 console.log("data removed", ll.removeData(50)); // data removed -1
