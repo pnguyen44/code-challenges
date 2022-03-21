@@ -57,21 +57,17 @@ class PriorityQueue extends Queue {
 
 const queue = new Queue();
 
-// console.log(queue.front()); // No element in queue
-// console.log(queue.remove()) // Queue is empty
+console.log(queue.front()); // No element in queue
+console.log(queue.remove()); // Queue is empty
 
-// queue.add(10);
-// queue.add(20);
-// queue.add(30);
-// queue.add(40);
-// queue.add(50);
-// queue.add(60);
+for (let i = 1; i <= 6; i++) {
+  queue.add(i * 10);
+}
 
-// console.log(queue.isEmpty()) // false
-// console.log(queue.front()) //  10
-// console.log(queue.remove()) // 10
-// console.log(queue.printQueue()) // [20, 30, 40, 50, 60]
-
+console.log(queue.isEmpty()); // false
+console.log(queue.front()); //  10
+console.log(queue.remove()); // 10
+queue.printQueue(); // [20, 30, 40, 50, 60]
 
 const pq = new PriorityQueue();
 pq.add(["Beau Carnes", 2]);
@@ -91,3 +87,68 @@ pq.printQueue();
 // [ 'Quincy Larson', 3 ] ]
 
 console.log(pq.front()); // [ 'Beau Carnes', 2 ]
+
+// Implement queue using object
+
+class MyQueue {
+  constructor() {
+    this.items = {};
+    this.head = 0
+    this.tail = 0
+  }
+  // Get the length queue
+  get length() {
+    return this.tail - this.head
+  }
+
+  // Determine if queue is empty
+  get isEmpty() {
+    return this.length === 0;
+  }
+
+  // Add element to queue
+  enqueue(element) {
+    this.items[this.tail] = element
+    this.tail++
+  }
+
+  // Remove element from queue. If queue is empty return "Queue is empty".
+  dequeue() {
+    if (this.isEmpty) {
+      return "Queue is empty"
+    }
+    const item = this.items[this.head]
+    delete this.items[this.head]
+    this.head++
+    return item
+  }
+
+  // Return the first element in queue. If queue is empty return "No element in queue".
+  peek() {
+    if (this.isEmpty) {
+      return "No element in queue"
+    }
+
+    return this.items[this.head]
+  }
+
+  // Print queue
+  printQueueAsArray() {
+    return Object.values(this.items)
+  }
+}
+
+const myQueue = new MyQueue();
+
+console.log(myQueue.peek()); // No element in queue
+console.log(myQueue.dequeue()) // Queue is empty
+
+for (let i = 1; i <= 6; i++) {
+  myQueue.enqueue(i * 10)
+}
+
+console.log(myQueue.isEmpty) // false
+console.log(myQueue.peek()) //  10
+console.log(myQueue.dequeue()) // 10
+console.log(myQueue.printQueueAsArray()) // [20, 30, 40, 50, 60]
+console.log(myQueue.length) // 5
