@@ -1,4 +1,4 @@
-function arrayEquals(a, b) {
+export default function arrayEquals(a, b) {
   return (
     Array.isArray(a) &&
     Array.isArray(b) &&
@@ -50,6 +50,3 @@ for (const [i, test] of testCases.entries()) {
   }
 }
 
-module.exports = {
-  arrayEquals,
-};

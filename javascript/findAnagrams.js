@@ -1,3 +1,4 @@
+import arrayEquals from "../utils.js";
 // 438. Find All Anagrams in a String
 // Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
 
@@ -23,8 +24,6 @@
 
 // 1 <= s.length, p.length <= 3 * 104
 // s and p consist of lowercase English letters.
-
-const { arrayEquals } = require("../utils");
 
 /**
  * @param {string} s

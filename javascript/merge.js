@@ -1,3 +1,5 @@
+import arrayEquals from "../utils.js";
+
 // 88. Merge Sorted Array
 // You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
@@ -36,7 +38,6 @@
 // 1 <= m + n <= 200
 // -109 <= nums1[i], nums2[j] <= 109
 
-const {arrayEquals} = require("../utils");
 
 /**
  * @param {number[]} nums1
