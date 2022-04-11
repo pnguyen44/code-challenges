@@ -9,45 +9,37 @@
 // - void remove(key) removes the key and its corresponding value if the map contains the mapping for the key.
 
 var MyHashMap = function () {
-  this.data = new Array(1000001)
+  this.hash = {};
 };
 
 /**
-* @param {number} key
-* @param {number} value
-* @return {void}
-*/
+ * @param {number} key
+ * @param {number} value
+ * @return {void}
+ */
 MyHashMap.prototype.put = function (key, value) {
-  this.data[key] = value
+  this.hash[key] = value;
 };
 
 /**
-* @param {number} key
-* @return {number}
-*/
+ * @param {number} key
+ * @return {number}
+ */
 MyHashMap.prototype.get = function (key) {
-  value = this.data[key]
-  return value !== undefined ? value : -1
+  const val = this.hash[key];
+  return val === undefined ? -1 : val;
 };
 
 /**
-* @param {number} key
-* @return {void}
-*/
+ * @param {number} key
+ * @return {void}
+ */
 MyHashMap.prototype.remove = function (key) {
-  delete this.data[key]
+  delete this.hash[key];
 };
 
-
-myHashMap = new MyHashMap();
-myHashMap.put(1, 1);
-myHashMap.put(2, 2);
-myHashMap.printHashMap(); // The map is now [[1,1], [2,2]]
-console.log(myHashMap.get(1)); // return 1, The map is now [[1,1], [2,2]]
-console.log(myHashMap.get(3)); // return -1 (i.e., not found), The map is now [[1,1], [2,2]]
-myHashMap.put(2, 1);
-myHashMap.printHashMap(); // The map is now [[1,1], [2,1]] (i.e., update the existing value)
-console.log(myHashMap.get(2)); // return 1, The map is now [[1,1], [2,1]]
-myHashMap.remove(2); // remove the mapping for 2
-myHashMap.printHashMap() // The map is now [[1,1]]
-console.log(myHashMap.get(2)); // return -1 (i.e., not found), The map is now [[1,1]]
+var obj = new MyHashMap();
+obj.put(1, "a");
+console.log(obj.get(1)); // "a"
+obj.remove(1);
+console.log(obj.get(1)); // -1
