@@ -67,8 +67,14 @@
 //   }
 // }
 
+// space complexity O(1)
 function singleNumber(nums) {
-  return nums.reduce((pre, curr) => pre ^ curr )
+  let xor = 0;
+
+  for (const num of nums) {
+    xor ^= num;
+  }
+  return xor;
 }
 
 const testCases = [
