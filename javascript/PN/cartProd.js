@@ -53,29 +53,6 @@ function cartProd3Sets(sets) {
 }
 
 // Write a function that returns an array of the cartesian product of any number of sets passed to it.
-function cartProd(sets) {
-  let results = [[]];
-  // loop through the sets array
-  for (let s = 0; s < sets.length; s++) {
-    // set currSet to the current element of the sets array
-    let currSet = sets[s];
-    let temp = [];
-    // loop through the results array
-    for (let r = 0; r < results.length; r++) {
-      // loop through the currSet array
-      // concat the current element of the currSet array with the results array
-      //and push that value to the temp array
-      for (let c = 0; c < currSet.length; c++) {
-        temp.push(results[r].concat(currSet[c]));
-      }
-    }
-    // set results to the temp array
-    results = temp;
-  }
-  return results;
-}
-
-// Alternative Solution:
 
 // function cartProd(sets) {
 //   let combos = [[]];
@@ -95,19 +72,37 @@ function cartProd(sets) {
 //   return combos;
 // }
 
+// Refactored solution
+function cartProd(sets) {
+  let combos = [[]];
+
+  for (const set of sets) {
+    const newCombos = [];
+    for (const combo of combos) {
+      for (const item of set) {
+        const newCombo = combo.concat(item);
+        newCombos.push(newCombo);
+      }
+    }
+    combos = newCombos;
+  }
+
+  return combos;
+}
+
 // test
 
 // console.log(cartProd2Sets([[1], [1]])) //  [[1, 1]]
 // console.log(cartProd2Sets([[1], ['a']])) // [[1, 'a']]
 // console.log(cartProd2Sets([['a'], [1]])) // [['a', 1]]
 // console.log(cartProd2Sets([[1, 2, 3], ['a']])) // [[1, 'a'], [2, 'a'], [3, 'a']]
-console.log(
-  cartProd2Sets([
-    [1, 2],
-    ["a", "b"],
-  ])
-); // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
-//console.log(cartProd([[1], [1, 2], [1,2,3]])) // [[1, 1, 1], [1, 2, 1],
+// console.log(
+//   cartProd2Sets([
+//     [1, 2],
+//     ["a", "b"],
+//   ])
+// ); // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
+console.log(cartProd([[1], [1, 2], [1,2,3]])) // [[1, 1, 1], [1, 2, 1],
 // [1, 1, 2], [1, 2, 2],
 // [1, 1, 3], [1, 2, 3]]
 // console.log(cartProd([[1, 2], [1, 2], [1,2]])) // [[1, 1, 1], [1, 1, 2], [1, 2, 1],
