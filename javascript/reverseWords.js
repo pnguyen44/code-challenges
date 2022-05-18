@@ -7,6 +7,35 @@
 // reverseWords("This is an example!"); // returns  "sihT si na !elpmaxe"
 // reverseWords("double  spaces"); // returns  "elbuod  secaps"
 
+// function reverseWords(str) {
+//   return str.split(' ').map(x => x.split('').reverse().join('')).join(' ')
+// }
+
+// recursive solution
 function reverseWords(str) {
-  return str.split(' ').map(x => x.split('').reverse().join('')).join(' ')
+  const reverseString = (str) => {
+    return str ? reverseString(str.substr(1)) + str[0] : str;
+  };
+
+  return str.split(" ").map(reverseString).join(" ");
+}
+
+const cases = [
+  {
+    str: "This is an example!",
+    want: "sihT si na !elpmaxe",
+  },
+  {
+    str: "double  spaces",
+    want: "elbuod  secaps",
+  },
+];
+
+for (const c of cases) {
+  const { str, want } = c;
+  const result = reverseWords(str);
+
+  if (want !== result) {
+    console.log("failed on input", str, "excepted", want, "got", result);
+  }
 }
