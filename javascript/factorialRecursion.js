@@ -11,10 +11,30 @@
 //
 // You have to create the function factorial that receives n and returns n!. You have to use recursion.
 
-
-const factorial = n => {
-  return  n === 0 ? 1 : n * factorial(n-1)
+const factorial = (n) => {
+  return n === 0 ? 1 : n * factorial(n - 1);
 };
 
-let answer =  factorial(2)
-console.log(answer)
+const cases = [
+  {
+    n: 0,
+    want: 1,
+  },
+  {
+    n: 2,
+    want: 2,
+  },
+  {
+    n: 5,
+    want: 120,
+  },
+];
+
+for (const c of cases) {
+  const { n, want } = c;
+  const result = factorial(n);
+
+  if (want !== result) {
+    console.log("failed on input", n, "excepted", want, "got", result);
+  }
+}
