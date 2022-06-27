@@ -9,7 +9,18 @@
 // - void remove(key) removes the key and its corresponding value if the map contains the mapping for the key.
 
 var MyHashMap = function () {
-  this.hash = {};
+  this.table = new Array(10);
+};
+
+MyHashMap.prototype.hash = function (key) {
+  let hash = 0;
+  const str = String(key);
+
+  for (const c of str) {
+    hash += String(c).charCodeAt(0);
+  }
+
+  return hash % this.table.length;
 };
 
 /**
@@ -18,7 +29,20 @@ var MyHashMap = function () {
  * @return {void}
  */
 MyHashMap.prototype.put = function (key, value) {
-  this.hash[key] = value;
+  const index = this.hash(key);
+
+  if (this.table[index] === undefined || this.table[index].length === 0) {
+    this.table[index] = [key, value];
+  }
+
+  for (let i = 0; i < this.table[index].length; i++) {
+    if (this.table[index][i][0] === key) {
+      this.table[index][i][1] = value;
+      return;
+    }
+  }
+
+  this.table[index].push([key, value]);
 };
 
 /**
@@ -26,8 +50,19 @@ MyHashMap.prototype.put = function (key, value) {
  * @return {number}
  */
 MyHashMap.prototype.get = function (key) {
-  const val = this.hash[key];
-  return val === undefined ? -1 : val;
+  const index = this.hash(key);
+
+  if (this.table[index] === undefined || this.table[index].length === 0) {
+    return -1;
+  }
+
+  for (let i = 0; i < this.table[index].length; i++) {
+    if (this.table[index][i][0] === key) {
+      return this.table[index][i][1];
+    }
+  }
+
+  return -1;
 };
 
 /**
@@ -35,7 +70,18 @@ MyHashMap.prototype.get = function (key) {
  * @return {void}
  */
 MyHashMap.prototype.remove = function (key) {
-  delete this.hash[key];
+  const index = this.hash(key);
+
+  if (this.table[index] === undefined || this.table[index].length === 0) {
+    return;
+  }
+
+  for (let i = 0; i < this.table[index].length; i++) {
+    if (this.table[index][i][0] === key) {
+      this.table[index].splice(i, 1);
+      return;
+    }
+  }
 };
 
 var obj = new MyHashMap();
