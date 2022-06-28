@@ -3,23 +3,55 @@
 // Given two sorted arrays nums1 and nums2 of size m and n respectively and an int k. Find the k-th largest element of these arrays.
 // Note that it is the k-th largest element in the sorted order, not the k-th distinct element.
 
-function kthLargestElement(nums1, nums2, k) {
-  let counter1 = 0;
-  let counter2 = 0;
-  let result = [];
+// function kthLargestElement(nums1, nums2, k) {
+//   const sorted = mergeList(nums1, nums2);
+//   return sorted[sorted.length - k];
+// }
 
-  while (counter1 < nums1.length && counter2 < nums2.length) {
-    if (nums1[counter1] < nums2[counter2]) {
-      result.push(nums1[counter1]);
-      counter1++;
-    } else {
-      result.push(nums2[counter2]);
-      counter2++;
-    }
+// function mergeList(a, b) {
+//   let indexA = 0;
+//   let indexB = 0;
+//   const result = [];
+
+//   while (indexA < a.length && indexB < b.length) {
+//     if (a[indexA] < b[indexB]) {
+//       result.push(a[indexA]);
+//       indexA++;
+//     } else {
+//       result.push(b[indexB]);
+//       indexB++;
+//     }
+//   }
+
+//   return result.concat(a.slice(indexA), b.slice(indexB));
+// }
+
+// Alternative solution:
+function kthLargestElement(nums1, nums2, k) {
+  let count = 0;
+  let aCounter = nums1.length - 1;
+  let bCounter = nums2.length - 1;
+  let result;
+
+  if (nums1.length === 0 || nums2.length === 0) {
+    return nums1[0] || nums2[0];
   }
 
-  result = result.concat(nums1.slice(counter1), nums2.slice(counter2));
-  return result[result.length - k];
+  while (aCounter < nums1.length && bCounter < nums2.length) {
+    if (nums1[aCounter] > nums2[bCounter]) {
+      result = nums1[aCounter];
+      aCounter--;
+    } else {
+      result = nums2[bCounter];
+      bCounter--;
+    }
+
+    count++;
+
+    if (count === k) {
+      return result;
+    }
+  }
 }
 
 const cases = [
