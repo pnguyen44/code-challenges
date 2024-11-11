@@ -39,29 +39,45 @@
  * @param {number} target
  * @return {number}
  */
+
+// Recursive Binary search
 // const searchInsert = function(nums, target) {
-//     for (let i = 0; i < nums.length; i++) {
-//         const curr = nums[i]
-//         if (curr >= target) {
-//             return i
-//         }
-//     }
-//     return nums.length
+//     return bs(nums, target, 0, nums.length - 1)
 // };
 
-// Faster runtime solution
-const searchInsert = function(nums, target) {
-    return bs(nums, target, 0, nums.length - 1)
+// const bs = function(nums, target, start, end) {
+//     if (start > end) return start
+//     const mid = Math.floor((start + end) / 2)
+
+//     if (nums[mid] > target) return bs(nums, target, start, mid - 1)
+//     if (nums[mid] < target) return bs(nums, target, mid + 1, end)
+//     return mid
+// }
+
+// Alternative binary search solution without recursion
+var searchInsert = function(nums, target) {
+    let left = 0
+    let right = nums.length - 1
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2)
+
+        if (nums[mid] === target) {
+            return mid
+        }
+
+        if (nums[mid] > target) {
+            right = mid - 1
+            continue;
+        }
+
+        if (nums[mid] < target) {
+            left = mid + 1
+            continue;
+        }
+    }
+    return left
 };
 
-const bs = function(nums, target, start, end) {
-    if (start > end) return start
-    const mid = Math.floor((start + end) / 2)
-
-    if (nums[mid] > target) return bs(nums, target, start, mid - 1)
-    if (nums[mid] < target) return bs(nums, target, mid + 1, end)
-    return mid
-}
 
 const testCases = [
     {
